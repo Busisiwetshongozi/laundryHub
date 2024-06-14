@@ -1,0 +1,77 @@
+.SignupForm{
+    width:600px ;
+    height: 600px;
+    background-color:whitesmoke;
+    margin-left: 400px;
+}
+#firstName{
+    width:400px ;
+    height: 30px;
+    border-radius: 10px;
+    border:solid 0px ;
+    margin-top: 60px;
+    margin-left:70px ;
+    background-color: antiquewhite;
+}
+
+#lastName{
+    width:400px ;
+    height: 30px;
+    border-radius: 10px;
+    border:solid 0px ;
+    margin-top: 30px;
+    margin-left:70px ;
+    background-color: antiquewhite;
+}
+#email{
+    width:400px ;
+    height: 30px;
+    border-radius: 10px;
+    border:solid 0px ;
+    margin-top: 30px;
+    margin-left:70px ;
+    background-color: antiquewhite;
+}
+#Address1{
+    width:400px ;
+    height: 30px;
+    border-radius: 10px;
+    border:solid 0px ;
+    margin-top: 10px;
+    margin-left:70px ;
+    background-color: antiquewhite;
+}
+#Address2{
+    width:400px ;
+    height: 30px;
+    border-radius: 10px;
+    border:solid 0px ;
+    margin-top: 30px;
+    margin-left:70px ;
+    background-color: antiquewhite;
+}
+#Address3{
+    width:400px ;
+    height: 30px;
+    border-radius: 10px;
+    border:solid 0px ;
+    margin-top: 30px;
+    margin-left:70px ;
+    background-color: antiquewhite;
+}
+button{
+    width:100px ;
+    height: 30px;
+    border-radius: 10px;
+    border:solid 0px ;
+    margin-left:250px ;
+    margin-top: 30px;
+    background-color: antiquewhite;
+}
+h1{
+    margin-left: 250px;
+   
+}
+#signup{
+    margin-top: 60px;
+}

@@ -1,0 +1,32 @@
+.washnFold{
+    background-color: antiquewhite;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-left: 300px;
+}
+.washnFoldnIron{
+    background-color: antiquewhite;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-left: 800px;
+    margin-top: -400px;
+}
+.irononly{
+    background-color:antiquewhite;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+.blanketswash{
+    background-color: antiquewhite;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-left: 800px;
+    margin-top: -400px;
+}

@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingPageComponent } from './pages/landingPage/landingPage.component';
 import { HomePageComponent } from './pages/landingPage/homePage/homePage.component';
 import { LoginComponent } from './pages/landingPage/login/login.component';
+import { ServOfferedComponent } from './pages/ServOffered/ServOffered.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { LoginComponent } from './pages/landingPage/login/login.component';
       NavbarComponent,
       LandingPageComponent,
       HomePageComponent,
-      LoginComponent
+      LoginComponent,
+      ServOfferedComponent
       
    ],
   imports: [

@@ -10,6 +10,13 @@ import { LandingPageComponent } from './pages/landingPage/landingPage.component'
 import { HomePageComponent } from './pages/landingPage/homePage/homePage.component';
 import { LoginComponent } from './pages/landingPage/login/login.component';
 import { ServOfferedComponent } from './pages/ServOffered/ServOffered.component';
+import { ServInfoComponent } from './components/serv-info/serv-info.component';
+import { IronServInfoComponent } from './components/iron-serv-info/iron-serv-info.component';
+import { WashBlanketsServInfoComponent } from './components/wash-blankets-serv-info/wash-blankets-serv-info.component';
+import { WashFoldIronComponent } from './components/wash-fold-iron/wash-fold-iron.component';
+
+import { OrderDetailsComponent } from './pages/order-details/order-details.component';
+import { OrderDetailsConfirmationComponent } from './pages/order-details-confirmation/order-details-confirmation.component';
 
 
 @NgModule({
@@ -21,7 +28,14 @@ import { ServOfferedComponent } from './pages/ServOffered/ServOffered.component'
       LandingPageComponent,
       HomePageComponent,
       LoginComponent,
-      ServOfferedComponent
+      ServOfferedComponent,
+      ServInfoComponent,
+      IronServInfoComponent,
+      WashBlanketsServInfoComponent,
+      WashFoldIronComponent,
+
+      OrderDetailsComponent,
+       OrderDetailsConfirmationComponent
       
    ],
   imports: [

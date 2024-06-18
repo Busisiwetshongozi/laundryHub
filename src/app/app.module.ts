@@ -19,6 +19,8 @@ import { OrderDetailsComponent } from './pages/order-details/order-details.compo
 import { OrderDetailsConfirmationComponent } from './pages/order-details-confirmation/order-details-confirmation.component';
 import { PaymentMethodComponent } from './pages/paymentMethod/paymentMethod.component';
 import { ChooseBankComponent } from './pages/chooseBank/chooseBank.component';
+import { BankComponent } from './pages/bank/bank.component';
+import { SelectaccountComponent } from './pages/selectaccount/selectaccount.component';
 
 @NgModule({
   declarations: [				
@@ -37,7 +39,9 @@ import { ChooseBankComponent } from './pages/chooseBank/chooseBank.component';
      OrderDetailsComponent,
     OrderDetailsConfirmationComponent,
       PaymentMethodComponent,
-      ChooseBankComponent
+      ChooseBankComponent,
+      BankComponent,
+      SelectaccountComponent
       
    ],
   imports: [

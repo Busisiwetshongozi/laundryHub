@@ -1,51 +1,135 @@
 #absa{
-    width: 200px;
-    height: 60px;
+   width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 20px;
+    
 }
 #african{
-    width: 80px;
-    height: 60px;
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 #standard{
-    width: 80px;
-    height: 60px;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 #capitec{
-    width: 80px;
-    height: 60px;
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 20px;
 }
 #tymebank{
-    width: 80px;
-    height: 60px;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 
 #nedbank{
-    width: 80px;
+    width: 200px;
     height: 60px;
 }
 
 #fnb{
     width: 200px;
-    height: 60px; 
+    height: 200px;
+    margin-top: 10px; 
+    margin-left: 10px;
 }
 .absa{
-   background-color: black;
-   width: ;
+margin-top: 10px;
+    width: 220px;
+    height: 220px;
+  background-color: aliceblue;
+    margin-left: 145px;
+  
 }
 
 .container{
     width: 800px;
-    height: 800px;
-    background-color: antiquewhite;
+    height: 1000px;
+
     margin-left: 300px;
 }
 .eft{
     width: 800px;
-    height: 200px;
-    background-color: black;
+    height: 100px;
+
+  background-color: black;
+  
 }
 .eft img{
     width:800px ;
     height: 200px;
+    
+}
+.nedbank{
+  margin-top: 30px;
+  width: 300px;
+  
+ 
+}
+.African{
+ margin-top:-210px ;
+  width: 220px;
+background-color: aliceblue;
+height: 220px;
+margin-left: -90px;
+ 
+
+}
+.fnb{
+  margin-top: 10px; 
+  width: 220px;
+  height: 220px;
+background-color: aliceblue;
+  margin-left:-90px ;
+  
+}
+.capitec{
+  margin-top: -230px;
+   width: 220px;
+   height: 220px;
+   margin-left: 380px;
+   background-color: aliceblue;
+  
+}
+.standard{
+   margin-top: -217px;
+   width: 220px;
+   height: 220px;
+  background-color: aliceblue;
+   margin-left: 145px;
+   
+  
+}
+.tymebank{
+    margin-left: 380px;
+  height: 220px;
+ margin-top: -220px;
+  width: 220px;
+  background-color: aliceblue;
+
+}
+h1{
+    
+  margin-left: 200px; 
+  color: rgb(67, 116, 165); 
+}
+.images{
+    width: 600px;
+    height: 500px;
+   padding-left: 100px;
+  background-color: aliceblue;
+   margin-top: 60px;
+margin-left: 60px;
+}
+.heading{
+  margin-top: 80px;
 }

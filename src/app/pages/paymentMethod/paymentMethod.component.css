@@ -1,0 +1,34 @@
+
+
+.container{
+    width: 600px;
+    height: 600px;
+    background-color: grey;
+    margin-left: 400px;
+}
+#img{
+    width:200px ;
+    height:100px ;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+h1{
+    margin-left: 120px;
+
+}
+.eft{
+background-color: whitesmoke;
+width: 600px;
+height: 150px;
+margin-top: 60px;
+}
+button{
+    height: 40px;
+    border-radius: 10px;
+    background-color:rgb(147, 135, 135);
+    border: solid 0px;
+    width: 200px ; 
+    margin-top: 300px;
+}
+
+  

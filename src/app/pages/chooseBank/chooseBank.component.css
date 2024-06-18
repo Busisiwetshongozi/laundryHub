@@ -1,0 +1,51 @@
+#absa{
+    width: 200px;
+    height: 60px;
+}
+#african{
+    width: 80px;
+    height: 60px;
+}
+#standard{
+    width: 80px;
+    height: 60px;
+}
+#capitec{
+    width: 80px;
+    height: 60px;
+}
+#tymebank{
+    width: 80px;
+    height: 60px;
+}
+
+
+#nedbank{
+    width: 80px;
+    height: 60px;
+}
+
+#fnb{
+    width: 200px;
+    height: 60px; 
+}
+.absa{
+   background-color: black;
+   width: ;
+}
+
+.container{
+    width: 800px;
+    height: 800px;
+    background-color: antiquewhite;
+    margin-left: 300px;
+}
+.eft{
+    width: 800px;
+    height: 200px;
+    background-color: black;
+}
+.eft img{
+    width:800px ;
+    height: 200px;
+}

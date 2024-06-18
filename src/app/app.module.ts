@@ -17,7 +17,8 @@ import { WashFoldIronComponent } from './components/wash-fold-iron/wash-fold-iro
 
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
 import { OrderDetailsConfirmationComponent } from './pages/order-details-confirmation/order-details-confirmation.component';
-
+import { PaymentMethodComponent } from './pages/paymentMethod/paymentMethod.component';
+import { ChooseBankComponent } from './pages/chooseBank/chooseBank.component';
 
 @NgModule({
   declarations: [				
@@ -33,9 +34,10 @@ import { OrderDetailsConfirmationComponent } from './pages/order-details-confirm
       IronServInfoComponent,
       WashBlanketsServInfoComponent,
       WashFoldIronComponent,
-
-      OrderDetailsComponent,
-       OrderDetailsConfirmationComponent
+     OrderDetailsComponent,
+    OrderDetailsConfirmationComponent,
+      PaymentMethodComponent,
+      ChooseBankComponent
       
    ],
   imports: [

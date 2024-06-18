@@ -21,6 +21,12 @@ import { PaymentMethodComponent } from './pages/paymentMethod/paymentMethod.comp
 import { ChooseBankComponent } from './pages/chooseBank/chooseBank.component';
 import { BankComponent } from './pages/bank/bank.component';
 import { SelectaccountComponent } from './pages/selectaccount/selectaccount.component';
+import { PaymentconfirmationComponent } from './pages/paymentconfirmation/paymentconfirmation.component';
+import { AbsapaymentComponent } from './pages/absapayment/absapayment.component';
+import { CapitecpaymentComponent } from './pages/capitecpayment/capitecpayment.component';
+import { FnbpaymentComponent } from './pages/fnbpayment/fnbpayment.component';
+import { AfricanpaymentComponent } from './pages/africanpayment/africanpayment.component';
+import { TymepaymentComponent } from './pages/tymepayment/tymepayment.component';
 
 @NgModule({
   declarations: [				
@@ -41,7 +47,13 @@ import { SelectaccountComponent } from './pages/selectaccount/selectaccount.comp
       PaymentMethodComponent,
       ChooseBankComponent,
       BankComponent,
-      SelectaccountComponent
+      SelectaccountComponent,
+      PaymentconfirmationComponent,
+      AbsapaymentComponent,
+      CapitecpaymentComponent,
+      FnbpaymentComponent,
+      AfricanpaymentComponent,
+      TymepaymentComponent
       
    ],
   imports: [

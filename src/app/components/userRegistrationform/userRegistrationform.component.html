@@ -1,18 +1,41 @@
-<div class="SignupForm">
-<form action="">
-  <h1 id="signup" >Sign Up</h1>
 
-<input id="firstName" type="text" placeholder="first name">
-<input  id="lastName"  type="text" placeholder="last name">
-<input id="email"  type="text" placeholder="email address">
-<p id="heading"  >Physical Address</p>
-<input id="Address1" type="text" placeholder="Address line 1">
-<input   id="Address2" type="text" placeholder="Address line 2">
-<input  id="Address3"  type="text" placeholder="Address line 3">
+<form class="Form" >
+  <h1>Sign up</h1>
+  <div class="name">
+    <label  class="form-label">First name</label>
+    <input type="text" class="form-control" id="name" value="Mark" required>
+    
+  </div>
+  <div class="surname">
+    <label  class="form-label">Last name</label>
+    <input type="text" class="form-control" id="surname" value="Otto" required>
+    
+  </div>
+
+  <div class="email">
+    <label class="form-label">Email</label>
+    <div class="email">
+     <input type="text" class="form-control" id="email"  value="Otto@gmail.com" required>
+      </div>
+  </div>
+  
+  
+  <div class="Address">
+    <label  class="form-label">Physical Address</label>
+    <input type="text" class="form-control" id="address" required>
+   </div>
+
+  <div class="1st line">
+    <label  class="form-label">Line 1</label>
+    <input type="text" class="form-control" id="line1" required>
+  </div>
+
+  <div class="2nd line">
+    <label  class="form-label">Line 2</label>
+    <input type="text" class="form-control" id="line2" required>
+  </div>
+
+  <div class="Sign up">
+    <button class="btn btn-primary" type="submit">Sign up</button>
+  </div>
 </form>
-
-<button>Sign Up</button>
-
-
-
-</div>

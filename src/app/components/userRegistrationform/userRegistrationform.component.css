@@ -1,75 +1,77 @@
-.SignupForm{
-    width:600px ;
+.Form{
+    width:400px ;
     height: 600px;
     background-color:whitesmoke;
-    margin-left: 400px;
+    margin-left: 600px;
+    border-radius: 30px;
 }
-#firstName{
-    width:400px ;
+#name{
+    width:300px ;
     height: 30px;
     border-radius: 10px;
     border:solid 0px ;
-    margin-top: 60px;
-    margin-left:70px ;
-    background-color: antiquewhite;
+  margin-left: 30px
+    
+
 }
 
-#lastName{
-    width:400px ;
+#surname{
+    width:300px ;
     height: 30px;
     border-radius: 10px;
     border:solid 0px ;
-    margin-top: 30px;
-    margin-left:70px ;
-    background-color: antiquewhite;
+    margin-left: 30px;
+  
 }
 #email{
-    width:400px ;
+    width:300px ;
     height: 30px;
     border-radius: 10px;
     border:solid 0px ;
-    margin-top: 30px;
-    margin-left:70px ;
-    background-color: antiquewhite;
+    margin-top: px;
+    margin-left:0px ;
+    margin-left: 30px;
+  
+   
 }
-#Address1{
-    width:400px ;
+#address{
+    width:300px ;
     height: 30px;
     border-radius: 10px;
     border:solid 0px ;
-    margin-top: 10px;
-    margin-left:70px ;
-    background-color: antiquewhite;
+    margin-top: px;
+    margin-left:30px ;
+
+   
 }
-#Address2{
-    width:400px ;
+#line2{
+    width:300px ;
     height: 30px;
     border-radius: 10px;
     border:solid 0px ;
-    margin-top: 30px;
-    margin-left:70px ;
-    background-color: antiquewhite;
+;margin-left: 30px;
+   ;
 }
-#Address3{
-    width:400px ;
+#line1{
+    width:300px ;
     height: 30px;
     border-radius: 10px;
     border:solid 0px ;
-    margin-top: 30px;
-    margin-left:70px ;
-    background-color: antiquewhite;
+    margin-left: 30px;
+    
 }
 button{
     width:100px ;
     height: 30px;
     border-radius: 10px;
     border:solid 0px ;
-    margin-left:250px ;
+    margin-left:150px ;
     margin-top: 30px;
-    background-color: antiquewhite;
+    background-color:rgb(45, 45, 138);
 }
 h1{
-    margin-left: 250px;
+    margin-left: 150px;
+    color: rgb(45, 45, 138);;
    
 }
 #signup{

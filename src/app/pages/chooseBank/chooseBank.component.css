@@ -1,135 +1,58 @@
-#absa{
-   width: 200px;
-    height: 200px;
-    margin-left: 10px;
-    margin-top: 20px;
-    
-}
-#african{
-    width: 200px;
-    height: 200px;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-#standard{
-    width: 200px;
-    height: 200px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-#capitec{
-    width: 200px;
-    height: 200px;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-#tymebank{
-    width: 200px;
-    height: 200px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-
-#nedbank{
-    width: 200px;
-    height: 60px;
-}
-
-#fnb{
-    width: 200px;
-    height: 200px;
-    margin-top: 10px; 
-    margin-left: 10px;
-}
-.absa{
-margin-top: 10px;
-    width: 220px;
-    height: 220px;
+.methods{
+  width: 600px;
+  height: 800px;
   background-color: aliceblue;
-    margin-left: 145px;
-  
+  margin-left: 400px;
+
+}
+.col1{
+  width: 200px;
+  height: 200px;
+margin-left: 30px;
+  margin-top: 60px;
+  border-radius: 60px;
 }
 
-.container{
-    width: 800px;
-    height: 1000px;
+.col2{
+  width: 200px;
+  height: 250px;
+  margin-left: 360px;
+margin-top: -200px;
 
-    margin-left: 300px;
+  border-radius: 30px;
 }
-.eft{
-    width: 800px;
-    height: 100px;
+.col3{
+  width: 200px;
+  height: 200px;
+  margin-top: -30px;
+margin-left: 30px;
+  border-radius: 30px;
+}
 
-  background-color: black;
-  
-}
-.eft img{
-    width:800px ;
-    height: 200px;
-    
-}
-.nedbank{
+.col4{
+  width: 200px;
+  height: 200px;
+margin-left: 30px;
   margin-top: 30px;
-  width: 300px;
-  
- 
+  border-radius: 30px;
 }
-.African{
- margin-top:-210px ;
-  width: 220px;
-background-color: aliceblue;
-height: 220px;
-margin-left: -90px;
- 
+
+.col5{
+  width: 200px;
+  height: 200px;
+  margin-left: 360px;
+margin-top: -430px;
 
 }
-.fnb{
-  margin-top: 10px; 
-  width: 220px;
-  height: 220px;
-background-color: aliceblue;
-  margin-left:-90px ;
-  
-}
-.capitec{
-  margin-top: -230px;
-   width: 220px;
-   height: 220px;
-   margin-left: 380px;
-   background-color: aliceblue;
-  
-}
-.standard{
-   margin-top: -217px;
-   width: 220px;
-   height: 220px;
-  background-color: aliceblue;
-   margin-left: 145px;
-   
-  
-}
-.tymebank{
-    margin-left: 380px;
-  height: 220px;
- margin-top: -220px;
-  width: 220px;
-  background-color: aliceblue;
 
+
+
+.card img{
+  height: 200px;
+
+  
 }
 h1{
-    
-  margin-left: 200px; 
-  color: rgb(67, 116, 165); 
-}
-.images{
-    width: 600px;
-    height: 500px;
-   padding-left: 100px;
-  background-color: aliceblue;
-   margin-top: 60px;
-margin-left: 60px;
-}
-.heading{
-  margin-top: 80px;
+  margin-left: 200PX;
+  color: rgb(115, 161, 161);
 }

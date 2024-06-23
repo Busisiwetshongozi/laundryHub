@@ -2,6 +2,7 @@
 
 p{
     margin-left: 300px;
+    color:black;
  
 }
 input{
@@ -15,8 +16,8 @@ input{
 .container{
     width: 800px;
     height:1100px;
-    background-color: whitesmoke;
-    margin-left: 200px;
+    background-color: rgb(115, 161, 161);
+    margin-left: 400px;
     border-radius: 10px;
 }
 #address{
@@ -39,10 +40,13 @@ button{
   
 }
 
+
 #next{
  margin-left: 270px;
  margin-top: 80px;
+ background-color: blue;
 }
 #back{
   margin-left: 60px;
+  background-color: white;
 }

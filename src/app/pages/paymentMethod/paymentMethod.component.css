@@ -3,7 +3,7 @@
 .container{
     width: 600px;
     height: 600px;
-    background-color: grey;
+    background-color:rgb(115, 161, 161) ;
     margin-left: 400px;
 }
 #img{
@@ -21,11 +21,13 @@ background-color: whitesmoke;
 width: 600px;
 height: 150px;
 margin-top: 60px;
+margin-left: -12px;
+
 }
 button{
     height: 40px;
     border-radius: 10px;
-    background-color:rgb(147, 135, 135);
+    background-color:rgb(115, 161, 161);
     border: solid 0px;
     width: 200px ; 
     margin-top: 300px;

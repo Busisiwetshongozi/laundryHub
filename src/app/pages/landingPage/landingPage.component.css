@@ -1,16 +1,7 @@
 body{
     background-color: rgb(107, 107, 209);
 }
-h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-color: rgb(115, 161, 161);
-font-size: 50px;
-margin-left: 100px;
-width:300px ;
-margin-top: 20px;
 
-
-}
 
 .nav-links{
     text-align: end;
@@ -77,8 +68,8 @@ border: 0px;
     border: 0px;
     width: 200px;
     background-color: rgb(115, 161, 161);
-    margin-top:200px ;
-    margin-left:1200px ;
+    margin-top:50px ;
+  
    
   
 
@@ -99,10 +90,22 @@ height: 100px;
 
 }
 
-#roro{
-    width: 100%;
-    height:100%;
+
+.i{
+    background-image: url('/assets/roro.jpeg');
+    background-size: cover; /* Adjusts the background image to cover the entire container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    height: 90vh; /* Sets the height of the container to the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(116, 14, 14);
+    text-align: center;
 }
+    
+
 
 
 .heroText{
@@ -119,4 +122,21 @@ height: 100px;
     width:800px ;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     margin-left: 30px;
+}
+
+.t{
+    margin-bottom: 30px;
+font-size:70px;
+font-weight: 19000;
+color: rgb(252, 249, 249);
+margin-top: -100px;
+margin-bottom: 50px;
+}
+
+.font{
+    color: #38a3a5;
+    width: 1000px;
+
+    font-weight: bolder;
+    font-size: 30px;
 }

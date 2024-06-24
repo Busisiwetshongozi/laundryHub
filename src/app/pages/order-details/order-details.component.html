@@ -1,29 +1,96 @@
 
 <div class="container">
-<h1>Pick Up Details</h1>
-<p>Do You Require us to fetch the laundry(Optional)</p>
-<input type="text">
-<p>Select Pick Up Date</p>
-<input type="text">
-<p>Select Pick Up Time</p>
-<input type="text">
-<h1>Customer Details</h1>
-<p>First Name</p>
-<input type="text">
-<p>Last Name</p>
-<input type="text">
-<p>Cell Number</p>
-<input type="text">
-<p>Email Address</p>
-<input type="text">
+
+
+
+<div class="holder"> <h1 >Pick Up Details</h1>
+
+
+    <div class="container1 ">
+        <div class="row row-cols-2">
+          <div class="col">     <label for="exampleFormControlInput1" class="form-label">Do You Require us to fetch the laundry(Optional)</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Select</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+
+              </select></div>
+              <div class="col">
+             
+                <label for="exampleFormControlInput1" class="form-label">Pick Up Date</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="29 June 2024">
+              </div>
+                  <div class="col">
+             
+                    <label for="exampleFormControlInput1" class="form-label">Pick Up Time</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="3:00 am">
+                  </div>
+                     
+        
+                    </div>
+      </div>
+
+</div>
+
+      
+
+<div class="holder"> <h1 class="" >Customer Details</h1>
+
+
+    <div class="container1 ">
+        <div class="row row-cols-2">
+            <div class="col">
+             
+                <label for="exampleFormControlInput1" class="form-label">Full Names</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Collect Now ">
+              </div>
+              <div class="col">
+             
+                <label for="exampleFormControlInput1" class="form-label">Cell Phone Number</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="10111">
+              </div>
+                  <div class="col">
+             
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Collect@gmail.com">
+                  </div>
+                     
+        
+                    </div>
+      </div>
+
+</div>
+
+
+
+<div class="holder">
+
+    
 <h1>Customer Address</h1>
-<p>street address</p>
-<input  id="address"  type="text">
 
+<div class="container1 ">
+    <div class="row row-cols-2">
+        <div class="col">
+         
+            <label for="exampleFormControlInput1" class="form-label">House Number</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="8th zondi ">
+          </div>
+          <div class="col">
+         
+            <label for="exampleFormControlInput1" class="form-label">Town</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Soweto">
+          </div>
+              <div class="col">
+         
+                <label for="exampleFormControlInput1" class="form-label">Postal Code</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="1900">
+              </div>
+                 
+    
+                </div>
+  </div>
 
-<input   id="second" type="text">
-<p>Town/City</p>
-<input type="text">
-<button id="back"  >Back</button>
-<button  routerLink="Confirm"  id="next" >Next</button>
+</div>
+<button id="back"  routerLink="/home" >Back</button>
+<button  routerLink="/register"  id="next" >Next</button>
 </div>

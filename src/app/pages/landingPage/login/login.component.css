@@ -48,6 +48,14 @@ margin-top: 30px;
  p{
     color:white;
     margin-top: 30px;
-    margin-left: 60px;
+    margin-left: px;
 
+ }
+ p button{
+    background-color:white;
+    color: black;
+    margin-left: 0px;
+    margin-top: 10px; 
+    border: solid 0px;
+    border-radius: 10px;
  }

@@ -1,65 +1,34 @@
 .Form{
-    width:400px ;
+    width:450px ;
     height: 600px;
     background-color:rgb(115, 161, 161);
     margin-left: 600px;
     border-radius: 30px;
+    margin-top: 50px;
+    padding-top: 25px;
 }
 #name{
-    width:300px ;
-    height: 30px;
+    width:395px ;
+    height: 40px;
     border-radius: 10px;
     border:solid 0px ;
-  margin-left: 30px
+  margin-left: 30px;
+  
     
 
 }
 
-#surname{
-    width:300px ;
-    height: 30px;
-    border-radius: 10px;
-    border:solid 0px ;
-    margin-left: 30px;
-  
-}
+
 #email{
-    width:300px ;
-    height: 30px;
+    width:395px ;
+    height: 40px;
     border-radius: 10px;
     border:solid 0px ;
-    margin-top: px;
     margin-left:0px ;
     margin-left: 30px;
-  
-   
 }
-#address{
-    width:300px ;
-    height: 30px;
-    border-radius: 10px;
-    border:solid 0px ;
-    margin-top: px;
-    margin-left:30px ;
 
-   
-}
-#line2{
-    width:300px ;
-    height: 30px;
-    border-radius: 10px;
-    border:solid 0px ;
-;margin-left: 30px;
-   ;
-}
-#line1{
-    width:300px ;
-    height: 30px;
-    border-radius: 10px;
-    border:solid 0px ;
-    margin-left: 30px;
-    
-}
+
 button{
     width:100px ;
     height: 30px;
@@ -85,4 +54,14 @@ label{
 p{margin-top: 10px;}
 p button{
     margin-top: -5px;
+}
+
+.form-label{
+    margin-top: 30px;
+}
+
+.al{
+
+ 
+    margin-left: 195px;
 }

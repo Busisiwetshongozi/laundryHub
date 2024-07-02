@@ -1,0 +1,58 @@
+.methods{
+  width: 600px;
+  height: 800px;
+  background-color: aliceblue;
+  margin-left: 400px;
+
+}
+.col1{
+  width: 200px;
+  height: 200px;
+margin-left: 30px;
+  margin-top: 60px;
+  border-radius: 60px;
+}
+
+.col2{
+  width: 200px;
+  height: 250px;
+  margin-left: 360px;
+margin-top: -200px;
+
+  border-radius: 30px;
+}
+.col3{
+  width: 200px;
+  height: 200px;
+  margin-top: -30px;
+margin-left: 30px;
+  border-radius: 30px;
+}
+
+.col4{
+  width: 200px;
+  height: 200px;
+margin-left: 30px;
+  margin-top: 30px;
+  border-radius: 30px;
+}
+
+.col5{
+  width: 200px;
+  height: 200px;
+  margin-left: 360px;
+margin-top: -430px;
+
+}
+
+
+
+.card img{
+  height: 200px;
+
+  
+}
+h1{
+  margin-left: 200PX;
+  color: rgb(115, 161, 161);
+}

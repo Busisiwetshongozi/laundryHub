@@ -1,0 +1,19 @@
+.nav{
+ background-color: rgb(115, 161, 161);
+    height: 80px;
+    display: flex;
+justify-content: flex-end;
+align-items: center;
+  
+
+}
+.nav-item{
+    margin-right: 100px;
+    color: white;
+}
+button{
+border:solid 0px;
+width:100px;
+border-radius: 30px;
+margin-right: 60px;
+}

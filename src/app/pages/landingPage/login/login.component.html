@@ -1,20 +1,27 @@
-<div class="login-container">
-<h1> LOGIN</h1>
-<form action="">
-<input type="text" placeholder="">
 
 
 
-</form>
-
-
-
-
-
-
-
-
-
-
+<form class="Form" >
+    <h1>Sign In</h1>
+    <div class="labels">
+    <div class="email">
+      <label  class="form-label">Email</label>
+      <input type="text" class="form-control" id="email" value="Your email" required>
+      
+    </div>
+    <div class="password">
+      <label  class="form-label">Password</label>
+      <input type="text" class="form-control" id="password" value="your password" required>
+      
+    </div>
 
 </div>
+    
+    
+   
+  
+    <div class="Login">
+      <button class="btn btn-primary" type="submit"  routerLink="/confirm"   >Sign In</button>
+    </div>
+    <p>Dont have account? <button class="btn btn-primary" type="submit" routerLink="/register"  > Sign Up </button></p>
+  </form>

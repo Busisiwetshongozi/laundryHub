@@ -1,0 +1,61 @@
+.Form{
+    width: 400px;
+    height: 600px;
+    background-color: rgb(115, 161, 161);
+margin-left: 500px;
+border-radius: 30px;
+}
+#email{
+    width: 200px;
+    height: 30px;
+    border-radius:30px ;
+    border: solid 0px;
+    margin-left: 30px;
+  
+ 
+}
+.labels{
+    margin-top: 160px;
+    margin-left: 60px;
+}
+#password{
+    width: 200px;
+    height: 30px;
+    border-radius:30px ;
+    border: solid 0px;
+
+    margin-left: 30px;
+}
+
+label{
+    color: white;
+}
+
+
+ h1{
+ color: white;
+ margin-left: 150px;
+
+
+  
+ }
+ button{
+background-color:white;
+color: black;
+margin-left: 150px;
+margin-top: 30px;
+ }
+ p{
+    color:white;
+    margin-top: 30px;
+    margin-left: px;
+
+ }
+ p button{
+    background-color:white;
+    color: black;
+    margin-left: 0px;
+    margin-top: 10px; 
+    border: solid 0px;
+    border-radius: 10px;
+ }

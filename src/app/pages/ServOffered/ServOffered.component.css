@@ -1,0 +1,119 @@
+.washnFold{
+    background-color: antiquewhite;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-left: 300px;
+}
+.washnFoldnIron{
+    background-color: rgb(110, 126, 194);
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-left: 800px;
+    margin-top: -400px;
+}
+.irononly{
+    background-color:antiquewhite;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+.blanketswash{
+    background-color: antiquewhite;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    margin-left: 800px;
+    margin-top: -400px;
+}
+.washnFold img{
+    width: 200px;
+    margin-left: 100px;
+    border-radius: 50%;
+    margin-top: 80px;
+}
+.washnFold h3{
+    font-size: 25px;
+    color: red;
+    margin-left: 60px;
+}
+.washnFold p{
+    color: gray;
+    font-size: 20px;
+    margin-left: 60px;
+}
+.washnFold h1{
+    color:grey;
+    font-size: 20px;
+    margin-left: 60px;
+}
+.washnFoldnIron img{
+    width: 200px;
+    margin-left: 100px;
+    border-radius: 50%;
+    margin-top: 80px;
+}
+.washnFoldnIron h3{
+    font-size: 25px;
+    color: red;
+    margin-left: 60px;
+}
+.washnFoldnIron p{
+    color: gray;
+    font-size: 20px;
+    margin-left: 60px;
+}
+.washnFoldnIron h1{
+    color:grey;
+    font-size: 20px;
+    margin-left: 60px;
+}
+.irononly img{
+    width: 200px;
+    margin-left: 100px;
+    border-radius: 50%;
+    margin-top: 80px;
+}
+
+.irononly h3{
+    font-size: 25px;
+    color: red;
+    margin-left: 60px;}
+
+
+.irononly p{
+    color: gray;
+    font-size: 20px;
+    margin-left: 60px;
+}
+.irononly h1{
+    color:grey;
+    font-size: 20px;
+    margin-left: 60px;
+}
+.blanketswash img{
+    width: 200px;
+    margin-left: 100px;
+    border-radius: 50%;
+    margin-top: 80px;
+}
+.blanketswash h3{
+    font-size: 25px;
+    color: red;
+    margin-left: 60px;}
+
+
+.blanketswash p{
+    color: gray;
+    font-size: 20px;
+    margin-left: 60px;
+}
+.blanketswash h1{
+    color:grey;
+    font-size: 20px;
+    margin-left: 60px;
+}

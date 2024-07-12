@@ -1,19 +1,20 @@
-.nav{
- background-color: rgb(115, 161, 161);
-    height: 80px;
+.container-fluid{
+    background-color: blue;
     display: flex;
-justify-content: flex-end;
-align-items: center;
+  justify-content: space-between;
   
+}
 
+.navbar-nav{
+ margin-left: 500px; 
+ display: flex;
+    
 }
-.nav-item{
-    margin-right: 100px;
-    color: white;
+.navbar-nav .nav-item{
+    margin-right: 60px
 }
-button{
-border:solid 0px;
-width:100px;
-border-radius: 30px;
-margin-right: 60px;
+.buttons{
+    margin-left: 100px;
+    display: flex;
+ 
 }

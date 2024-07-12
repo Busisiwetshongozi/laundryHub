@@ -11,14 +11,12 @@ import { UserRegistrationformComponent } from './components/userRegistrationform
 import { WashBlanketsServInfoComponent } from './components/wash-blankets-serv-info/wash-blankets-serv-info.component';
 import { WashFoldIronComponent } from './components/wash-fold-iron/wash-fold-iron.component';
 import { ServOfferedComponent } from './pages/ServOffered/ServOffered.component';
-import { HomePageComponent } from './pages/landingPage/homePage/homePage.component';
+import { HomePageComponent } from './pages/homePage/homePage.component';
 import { LandingPageComponent } from './pages/landingPage/landingPage.component';
-import { LoginComponent } from './pages/landingPage/login/login.component';
-
+import { LoginComponent } from './pages/login/login.component';
 import { AfricanselectComponent } from './components/africanselect/africanselect.component';
 import { CapitecselectComponent } from './components/capitecselect/capitecselect.component';
 import { AbsaselectComponent } from './components/absaselect/absaselect.component';
-import { FnbselectComponent } from './fnbselect/fnbselect.component';
 import { AbsapaymentComponent } from './pages/absapayment/absapayment.component';
 import { AfricanpaymentComponent } from './pages/africanpayment/africanpayment.component';
 import { BankComponent } from './pages/bank/bank.component';
@@ -31,7 +29,8 @@ import { PaymentMethodComponent } from './pages/paymentMethod/paymentMethod.comp
 import { PaymentconfirmationComponent } from './pages/paymentconfirmation/paymentconfirmation.component';
 import { SelectaccountComponent } from './pages/selectaccount/selectaccount.component';
 import { TymepaymentComponent } from './pages/tymepayment/tymepayment.component';
-import { TymeselectComponent } from './tymeselect/tymeselect.component';
+import { TymeselectComponent } from './components/tymeselect/tymeselect.component';
+import { FnbselectComponent } from './components/fnbselect/fnbselect.component';
 
 @NgModule({
   declarations: [				
@@ -59,11 +58,12 @@ import { TymeselectComponent } from './tymeselect/tymeselect.component';
       FnbpaymentComponent,
       AfricanpaymentComponent,
       TymepaymentComponent,
+      TymeselectComponent,
+       FnbselectComponent,
       AbsaselectComponent,
       AfricanselectComponent,
       CapitecselectComponent,
-      FnbselectComponent,
-      TymeselectComponent
+ 
       
    ],
   imports: [

@@ -10,14 +10,14 @@ import { BankComponent } from './pages/bank/bank.component';
 import { AbsapaymentComponent } from './pages/absapayment/absapayment.component';
 import { AfricanpaymentComponent } from './pages/africanpayment/africanpayment.component';
 import { TymepaymentComponent } from './pages/tymepayment/tymepayment.component';
-import { TymeselectComponent } from './tymeselect/tymeselect.component';
+import { TymeselectComponent } from './components/tymeselect/tymeselect.component';
 import { AfricanselectComponent } from './components/africanselect/africanselect.component';
 import { AbsaselectComponent } from './components/absaselect/absaselect.component';
 import { SelectaccountComponent } from './pages/selectaccount/selectaccount.component';
-import { FnbselectComponent } from './fnbselect/fnbselect.component';
+import { FnbselectComponent } from './components/fnbselect/fnbselect.component';
 import { PaymentconfirmationComponent } from './pages/paymentconfirmation/paymentconfirmation.component';
 import { UserRegistrationformComponent } from './components/userRegistrationform/userRegistrationform.component';
-import { LoginComponent } from './pages/landingPage/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 const routes: Routes = [

@@ -32,6 +32,8 @@ import { TymepaymentComponent } from './pages/tymepayment/tymepayment.component'
 import { TymeselectComponent } from './components/tymeselect/tymeselect.component';
 import { FnbselectComponent } from './components/fnbselect/fnbselect.component';
 
+
+
 @NgModule({
   declarations: [				
     AppComponent,
@@ -68,7 +70,8 @@ import { FnbselectComponent } from './components/fnbselect/fnbselect.component';
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

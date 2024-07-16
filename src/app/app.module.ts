@@ -31,6 +31,7 @@ import { SelectaccountComponent } from './pages/selectaccount/selectaccount.comp
 import { TymepaymentComponent } from './pages/tymepayment/tymepayment.component';
 import { TymeselectComponent } from './components/tymeselect/tymeselect.component';
 import { FnbselectComponent } from './components/fnbselect/fnbselect.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -71,6 +72,8 @@ import { FnbselectComponent } from './components/fnbselect/fnbselect.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+   
    
   ],
   providers: [],

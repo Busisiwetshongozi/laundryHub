@@ -24,10 +24,10 @@ const routes: Routes = [
 
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to home
   { path: 'home', component: LandingPageComponent },
-  { path: 'order', component:OrderDetailsComponent },
+  {path:'order',component:OrderDetailsComponent},
+  { path: 'register', component:UserRegistrationformComponent },
+{ path: 'login', component:LoginComponent },
 
-  { path: 'register', component: UserRegistrationformComponent },
-  { path: 'login', component:LoginComponent },
   { path: 'confirm', component: OrderDetailsConfirmationComponent },
   { path: 'payment', component: PaymentMethodComponent },
   { path: 'bank', component:ChooseBankComponent },

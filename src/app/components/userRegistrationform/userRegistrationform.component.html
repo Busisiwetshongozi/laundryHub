@@ -1,30 +1,20 @@
 
-<form class="Form" >
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
   <h1>Sign up</h1>
-  <div class="name">
-    <label  class="form-label">Full Names</label>
-    <input type="text" class="form-control" id="name" value="Mark" required>
-    
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" formControlName="name" class="form-control" id="name" placeholder="Enter your full name">
   </div>
 
-
-  <div class="email">
-    <label class="form-label">Email</label>
-    <div class="email">
-     <input type="text" class="form-control" id="email"  value="Otto@gmail." required>
-      </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter your email address">
   </div>
   
-  <div class="email">
-    <label class="form-label">Phone Number</label>
-    <div class="email">
-     <input type="text" class="form-control" id="email"  value="Otto@gmail." required>
-      </div>
+  <div class="form-group">
+    <label for="phoneNumber">Phone Number</label>
+    <input type="text" formControlName="phoneNumber" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
   </div>
-  <p class="al" >  Already have account?  <a routerLink="/login">Sign In</a>  </p>
-
-
-  <button  routerLink="/login"  >Sign Up</button>
-
-
+  
+  <button type="submit"  routerLink="/login" [disabled]="!signupForm.valid">Sign Up</button>
 </form>

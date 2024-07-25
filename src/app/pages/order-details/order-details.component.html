@@ -15,11 +15,11 @@
         </div>
         <div class="col">
           <label class="form-label">Pick Up Date</label>
-          <input type="date" class="form-control" formControlName="pickupDate" placeholder="Pick Up Date">
+          <input type="date" class="form-control" formControlName="date" placeholder="Pick Up Date">
         </div>
         <div class="col">
           <label class="form-label">Pick Up Time</label>
-          <input type="time" class="form-control" formControlName="pickupTime" placeholder="Pick Up Time">
+          <input type="time" class="form-control" formControlName="time" placeholder="Pick Up Time">
         </div>
       </div>
     </div>
@@ -30,13 +30,10 @@
     <div class="container1">
       <div class="row row-cols-2">
         <div class="col">
-          <label class="form-label">Full Names</label>
-          <input type="text" class="form-control" formControlName="fullName" placeholder="Full Names">
+          <label class="form-label">Customer Name</label>
+          <input type="text" class="form-control" formControlName="name" placeholder="Full Names">
         </div>
-        <div class="col">
-          <label class="form-label">Cell Phone Number</label>
-          <input type="text" class="form-control" formControlName="phoneNumber" placeholder="Cell Phone Number">
-        </div>
+        
         <div class="col">
           <label class="form-label">Email</label>
           <input type="email" class="form-control" formControlName="email" placeholder="Email">
@@ -68,13 +65,12 @@
 <div class="confirm" *ngIf="submitted">
   <h2>Submitted Data</h2>
   <p><strong>Do You Require us to fetch the laundry:</strong> {{ submittedData.requireFetch }}</p>
-  <p><strong>Pick Up Date:</strong> {{ submittedData.pickupDate }}</p>
-  <p><strong>Pick Up Time:</strong> {{ submittedData.pickupTime }}</p>
-  <p><strong>Full Names:</strong> {{ submittedData.fullName }}</p>
-  <p><strong>Cell Phone Number:</strong> {{ submittedData.phoneNumber }}</p>
+  <p><strong>Pick Up Date:</strong> {{ submittedData.date }}</p>
+  <p><strong>Pick Up Time:</strong> {{ submittedData.time }}</p>
+  <p><strong>Full Names:</strong> {{ submittedData.name }}</p>
   <p><strong>Email:</strong> {{ submittedData.email }}</p>
   <p><strong>Address:</strong> {{ submittedData.address }}</p>
-  <button> Confirm</button>
+  <button (click)="onConfirm()" > Confirm</button>
   
 </div>
 

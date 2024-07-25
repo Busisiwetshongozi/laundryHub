@@ -32,7 +32,9 @@ import { TymepaymentComponent } from './pages/tymepayment/tymepayment.component'
 import { TymeselectComponent } from './components/tymeselect/tymeselect.component';
 import { FnbselectComponent } from './components/fnbselect/fnbselect.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { GetOrdersComponent } from './components/get-orders/get-orders.component';
+import { OrderByIdComponent } from './components/order-by-id/order-by-id.component';
 
 
 @NgModule({
@@ -66,14 +68,19 @@ import { ReactiveFormsModule } from '@angular/forms';
       AbsaselectComponent,
       AfricanselectComponent,
       CapitecselectComponent,
+ UserRegistrationformComponent,
+ GetOrdersComponent,
+ OrderByIdComponent,
  
+
+
       
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-   
+    HttpClientModule
    
   ],
   providers: [],

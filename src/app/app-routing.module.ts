@@ -18,6 +18,7 @@ import { FnbselectComponent } from './components/fnbselect/fnbselect.component';
 import { PaymentconfirmationComponent } from './pages/paymentconfirmation/paymentconfirmation.component';
 import { UserRegistrationformComponent } from './components/userRegistrationform/userRegistrationform.component';
 import { LoginComponent } from './pages/login/login.component';
+import { OrderByIdComponent } from './components/order-by-id/order-by-id.component';
 
 
 const routes: Routes = [
@@ -35,7 +36,7 @@ const routes: Routes = [
 
   { path: 'select', component: AbsaselectComponent },
   { path: 'success', component:PaymentconfirmationComponent },
- 
+  { path: 'orders/:id', component: OrderByIdComponent },
 
 
 ];

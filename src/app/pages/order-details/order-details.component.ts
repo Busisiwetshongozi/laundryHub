@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { CreateOrderService } from 'src/app/services/create-order.service';
+import { Order } from 'src/app/models/Order';
 
 @Component({
   selector: 'app-order-details',
@@ -14,13 +17,12 @@ export class OrderDetailsComponent implements OnInit{
   
   
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,private createOrder :CreateOrderService) {
     this.pickupForm = this.formBuilder.group({
       requireFetch: ['Select'], // Default value is 'Select', adjust as needed
-      pickupDate: ['', Validators.required],
-      pickupTime: ['', Validators.required],
-      fullName: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
+      date: ['', Validators.required],
+      time: ['', Validators.required],
+      name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       address: ['', Validators.required],
       
@@ -39,4 +41,21 @@ export class OrderDetailsComponent implements OnInit{
       console.log('Submitted Data:', this.submittedData);
    
 }
+
+
+onConfirm() {
+  if (this.submittedData) {
+    this.createOrder.createOrder(this.submittedData)
+        .subscribe(
+          (response: any) => {
+            console.log('Data sent successfully:', response);
+            // Optionally, reset form or navigate to a success page
+          },
+          (error: any) => {
+            console.error('Error submitting data:', error);
+            // Handle error, show user-friendly message, etc.
+          }
+        );
+    }
+  }
 }

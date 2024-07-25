@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { CreateCustomerService } from 'src/app/services/create-customer.service'; // Adjust the path as per your project structure
+import { Customer } from 'src/app/models/Customer'; // Adjust the path as per your project structure
 
 @Component({
   selector: 'app-userRegistrationform',
@@ -11,11 +12,12 @@ export class UserRegistrationformComponent implements OnInit {
 
   signupForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(private formBuilder: FormBuilder, private createCustomerService: CreateCustomerService) {
     this.signupForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      number: ['', Validators.required]
+      name: [''],
+      email: [''],
+      number: Number,
+      address: ['']
     });
   }
 
@@ -23,19 +25,27 @@ export class UserRegistrationformComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.signupForm.valid) {
-      this.http.post('/api/customers/add', this.signupForm.value)
+     
+      const customerData: Customer = {
+        name: this.signupForm.get('name')?.value,
+        email: this.signupForm.get('email')?.value,
+        number: this.signupForm.get('number')?.value,
+        address: this.signupForm.get('address')?.value
+      };
+
+      this.createCustomerService.createCustomer(customerData)
         .subscribe(
           response => {
             console.log('Successfully submitted:', response);
-            // Optionally, reset the form
             this.signupForm.reset();
           },
           error => {
             console.error('Error submitting form:', error);
           }
         );
-    }
+    } 
   }
-}
+
+
+
 

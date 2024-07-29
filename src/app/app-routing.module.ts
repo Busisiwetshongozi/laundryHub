@@ -3,7 +3,6 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './pages/landingPage/landingPage.component';
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
-import { OrderDetailsConfirmationComponent } from './pages/order-details-confirmation/order-details-confirmation.component';
 import { PaymentMethodComponent } from './pages/paymentMethod/paymentMethod.component';
 import { ChooseBankComponent } from './pages/chooseBank/chooseBank.component';
 import { BankComponent } from './pages/bank/bank.component';
@@ -30,7 +29,7 @@ const routes: Routes = [
   { path: 'register', component:UserRegistrationformComponent },
 { path: 'login', component:LoginComponent },
 
-  { path: 'confirm', component: OrderDetailsConfirmationComponent },
+
   { path: 'payment', component: PaymentMethodComponent },
   { path: 'bank', component:ChooseBankComponent },
   { path: 'absa', component:AbsapaymentComponent },

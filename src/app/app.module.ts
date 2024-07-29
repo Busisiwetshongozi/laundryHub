@@ -23,7 +23,6 @@ import { BankComponent } from './pages/bank/bank.component';
 import { CapitecpaymentComponent } from './pages/capitecpayment/capitecpayment.component';
 import { ChooseBankComponent } from './pages/chooseBank/chooseBank.component';
 import { FnbpaymentComponent } from './pages/fnbpayment/fnbpayment.component';
-import { OrderDetailsConfirmationComponent } from './pages/order-details-confirmation/order-details-confirmation.component';
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
 import { PaymentMethodComponent } from './pages/paymentMethod/paymentMethod.component';
 import { PaymentconfirmationComponent } from './pages/paymentconfirmation/paymentconfirmation.component';
@@ -57,7 +56,7 @@ import { GetUserOrderComponent } from './components/get-user-order/get-user-orde
       WashBlanketsServInfoComponent,
       WashFoldIronComponent,
      OrderDetailsComponent,
-    OrderDetailsConfirmationComponent,
+  
       PaymentMethodComponent,
       ChooseBankComponent,
       BankComponent,

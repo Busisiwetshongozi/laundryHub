@@ -35,7 +35,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GetOrdersComponent } from './components/get-orders/get-orders.component';
 import { OrderByIdComponent } from './components/order-by-id/order-by-id.component';
+
 import { CustomerByIdComponent } from './components/customer-by-id/customer-by-id.component';
+
+import { GetUserOrderComponent } from './components/get-user-order/get-user-order.component';
+
 
 
 @NgModule({
@@ -72,7 +76,11 @@ import { CustomerByIdComponent } from './components/customer-by-id/customer-by-i
  UserRegistrationformComponent,
  GetOrdersComponent,
  OrderByIdComponent,
+
  CustomerByIdComponent,
+
+ GetUserOrderComponent,
+
  
 
 

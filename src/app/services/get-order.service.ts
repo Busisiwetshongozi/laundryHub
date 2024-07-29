@@ -11,6 +11,8 @@ export class GetOrderService {
   constructor( private http:HttpClient) { }
 
   apiUrl='http://localhost:8080/api/orders';
+
+  
   getOrderById(id: number): Observable<Order> {
     return this.http.get<Order>(`${this.apiUrl}/${id}`);
   }

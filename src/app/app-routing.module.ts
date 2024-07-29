@@ -19,6 +19,7 @@ import { PaymentconfirmationComponent } from './pages/paymentconfirmation/paymen
 import { UserRegistrationformComponent } from './components/userRegistrationform/userRegistrationform.component';
 import { LoginComponent } from './pages/login/login.component';
 import { OrderByIdComponent } from './components/order-by-id/order-by-id.component';
+import { CustomerByIdComponent } from './components/customer-by-id/customer-by-id.component';
 
 
 const routes: Routes = [
@@ -37,7 +38,7 @@ const routes: Routes = [
   { path: 'select', component: AbsaselectComponent },
   { path: 'success', component:PaymentconfirmationComponent },
   { path: 'orders/:id', component: OrderByIdComponent },
-
+  { path: 'customers/:id',component:CustomerByIdComponent },
 
 ];
 

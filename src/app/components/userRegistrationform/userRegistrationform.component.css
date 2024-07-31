@@ -45,7 +45,9 @@ p button{
 }
 form{
     background-color:rgb(8, 75, 53);
-    height: 930px;
+    height: 800px;
+    margin-left: 400px;
+    width: 400px;
 
 }
 input{

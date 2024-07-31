@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GetServicesService } from 'src/app/services/get-services.service';
+import { Services } from 'src/app/models/Services';
 
 @Component({
   selector: 'app-ServOffered',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ServOffered.component.css']
 })
 export class ServOfferedComponent implements OnInit {
+  services: Services[] = [];
 
-  constructor() { }
+  constructor(private getservices:GetServicesService) { }
 
   ngOnInit() {
+    this.fetchServices();
   }
+ 
 
+  fetchServices() {
+    this.getservices.getServices()
+      .subscribe(
+        (services: Services[]) => {
+          this.services =services;
+          console.log('Fetched services:', this.services);
+        },
+        (error: any) => {
+          console.error('Error fetching services:', error);
+          // Handle error, show user-friendly message, etc.
+        }
+      );
+  }
 }

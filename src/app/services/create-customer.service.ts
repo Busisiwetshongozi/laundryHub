@@ -8,7 +8,7 @@ import { Customer } from '../models/Customer';
 })
 export class CreateCustomerService {
 
-  private apiUrl = 'http://localhost:8080/api/customers/add';
+  private apiUrl = 'http://localhost:8080/auth/signup';
 
 
   constructor(private http: HttpClient) {}

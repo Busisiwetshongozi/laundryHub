@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { CreateCustomerService } from 'src/app/services/create-customer.service'; // Adjust the path as per your project structure
-import { Customer } from 'src/app/models/Customer'; // Adjust the path as per your project structure
+import { CreateCustomerService } from 'src/app/services/create-customer.service'; 
+import { User } from 'src/app/models/User'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-userRegistrationform',
@@ -12,12 +13,16 @@ export class UserRegistrationformComponent implements OnInit {
 
   signupForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private createCustomerService: CreateCustomerService) {
+  constructor(private formBuilder: FormBuilder, private createCustomerService: CreateCustomerService,private router:Router) {
     this.signupForm = this.formBuilder.group({
-      name: [''],
+     
       email: [''],
-      number: Number,
-      address: ['']
+      number:[0],
+      role:[''],
+      address: [''],
+      firstName:[''],
+      lastName:[''],
+      password:['']
     });
   }
 
@@ -26,18 +31,22 @@ export class UserRegistrationformComponent implements OnInit {
 
   onSubmit() {
      
-      const customerData: Customer = {
-        name: this.signupForm.get('name')?.value,
-        email: this.signupForm.get('email')?.value,
-        number: this.signupForm.get('number')?.value,
-        address: this.signupForm.get('address')?.value
-      };
+    const customerData: User = {
+      firstName: this.signupForm.get('firstName')?.value || '', 
+      email: this.signupForm.get('email')?.value || '', 
+      number: this.signupForm.get('number')?.value || 0, 
+      address: this.signupForm.get('address')?.value || '', 
+      role: this.signupForm.get('role')?.value || '', 
+      password: this.signupForm.get('password')?.value || '', 
+      lastName: this.signupForm.get('lastName')?.value || '' 
+  };
 
       this.createCustomerService.createCustomer(customerData)
         .subscribe(
           response => {
             console.log('Successfully submitted:', response);
             this.signupForm.reset();
+            this.router.navigate(['/login']);
           },
           error => {
             console.error('Error submitting form:', error);

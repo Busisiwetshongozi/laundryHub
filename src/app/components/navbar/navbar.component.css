@@ -1,20 +1,35 @@
 .container-fluid{
-    background-color: blue;
+    background-color: rgb(2, 46, 22);
     display: flex;
   justify-content: space-between;
+  height: 100px;
+
   
 }
 
 .navbar-nav{
- margin-left: 500px; 
+ margin-left: 300px; 
  display: flex;
+
     
 }
 .navbar-nav .nav-item{
-    margin-right: 60px
+    margin-right: 60px;
+   
 }
 .buttons{
     margin-left: 100px;
     display: flex;
- 
+   
 }
+.nav-link{
+    color: white;
+    
+}
+h1{
+ 
+    color: white;
+    width: 300px;
+    height: 60px;
+}
+

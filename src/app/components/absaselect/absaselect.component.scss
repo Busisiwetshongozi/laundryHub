@@ -28,7 +28,7 @@ button{
 margin-left: -12px;
     border: solid 0px;
     width: 400px ; 
-    margin-top: 190px;
+    margin-top: 90px;
    
     
 }
@@ -58,3 +58,16 @@ background-color: rgb(115, 161, 161);
     .amount p{
        
     }
+    .account {
+        padding: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer; /* Show a pointer cursor to indicate it's clickable */
+        transition: background-color 0.3s ease; /* Smooth transition for color change */
+        margin-top: -10px;
+      }
+      
+      .account.clicked {
+        background-color: #d1e7dd; /* Change to your desired color */
+        border-color: #007bff; /* Optional: Change border color */
+      }
+      

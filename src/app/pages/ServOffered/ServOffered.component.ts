@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetServicesService } from 'src/app/services/get-services.service';
 import { Services } from 'src/app/models/Services';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ServOffered',
@@ -10,7 +11,7 @@ import { Services } from 'src/app/models/Services';
 export class ServOfferedComponent implements OnInit {
   services: Services[] = [];
 
-  constructor(private getservices:GetServicesService) { }
+  constructor(private getservices:GetServicesService,private router:Router) { }
 
   ngOnInit() {
     this.fetchServices();
@@ -29,5 +30,9 @@ export class ServOfferedComponent implements OnInit {
           // Handle error, show user-friendly message, etc.
         }
       );
+  }
+
+  onCardClick(serviceId: number): void {
+    this.router.navigate(['/services', serviceId]);
   }
 }

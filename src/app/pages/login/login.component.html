@@ -1,27 +1,37 @@
-
-
-
-<form class="Form" >
-    <h1>Sign In</h1>
-    <div class="labels">
+<form class="Form" (ngSubmit)="onLogin()" #loginForm="ngForm">
+  <h1>Sign In</h1>
+  <div class="labels">
     <div class="email">
-      <label  class="form-label">Email</label>
-      <input type="text" class="form-control" id="email" value="Your email" required>
-      
+      <label class="form-label" for="email">Email</label>
+      <input 
+        type="email" 
+        class="form-control" 
+        [(ngModel)]="email" 
+        id="email" 
+        name="email" 
+        placeholder="Your email" 
+        required 
+        autocomplete="email"
+      >
     </div>
     <div class="password">
-      <label  class="form-label">Password</label>
-      <input type="text" class="form-control" id="password" value="your password" required>
-      
+      <label class="form-label" for="password">Password</label>
+      <input 
+        type="password" 
+        class="form-control" 
+        [(ngModel)]="password" 
+        id="password" 
+        name="password" 
+        placeholder="Your password" 
+        required 
+        autocomplete="current-password"
+      >
     </div>
-
-</div>
-    
-    
-   
+  </div>
   
-    <div class="Login">
-      <button class="btn btn-primary" type="submit"  routerLink="/confirm"   >Sign In</button>
-    </div>
-    <p>Dont have account? <a>Sign Up</a> </p>
-  </form>
+  <div class="Login">
+    <button class="btn btn-primary" type="submit">Sign In</button>
+  </div>
+  <p>Don't have an account? <a >Sign Up</a></p>
+</form>
+

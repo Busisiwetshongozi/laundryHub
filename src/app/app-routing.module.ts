@@ -19,6 +19,9 @@ import { UserRegistrationformComponent } from './components/userRegistrationform
 import { LoginComponent } from './pages/login/login.component';
 import { OrderByIdComponent } from './components/order-by-id/order-by-id.component';
 import { CustomerByIdComponent } from './components/customer-by-id/customer-by-id.component';
+import { ServOfferedComponent } from './pages/ServOffered/ServOffered.component';
+import { ServInfoComponent } from './components/serv-info/serv-info.component';
+import { GetUserOrderComponent } from './components/get-user-order/get-user-order.component';
 
 
 const routes: Routes = [
@@ -28,16 +31,16 @@ const routes: Routes = [
   {path:'order',component:OrderDetailsComponent},
   { path: 'register', component:UserRegistrationformComponent },
 { path: 'login', component:LoginComponent },
-
-
-  { path: 'payment', component: PaymentMethodComponent },
+{ path: 'services', component:ServOfferedComponent },
+{ path: 'services/:id', component: ServInfoComponent },
+{ path: 'payment', component: PaymentMethodComponent },
   { path: 'bank', component:ChooseBankComponent },
   { path: 'absa', component:AbsapaymentComponent },
-
-  { path: 'select', component: AbsaselectComponent },
+{ path: 'select', component: AbsaselectComponent },
   { path: 'success', component:PaymentconfirmationComponent },
   { path: 'orders/:id', component: OrderByIdComponent },
   { path: 'customers/:id',component:CustomerByIdComponent },
+  { path: 'user-order',component:GetUserOrderComponent},
 
 ];
 

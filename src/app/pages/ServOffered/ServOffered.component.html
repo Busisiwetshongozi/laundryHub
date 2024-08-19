@@ -1,7 +1,10 @@
-<div class="container">
-<div class="services-grid">
+<app-navbar></app-navbar>
 
-<div *ngFor="let service of services"  class="service-item">
+<div class="container" >
+    <h1 style="color: white;">Services</h1>
+<div class="services-grid" style="height: 600px;margin-top: -50px;">
+
+<div *ngFor="let service of services" (click)="onCardClick(service.id)"  class="service-item">
 <img src="assets/wash.jpeg" alt="">
 <h1>{{service.name}}</h1>
 <h1>R{{service.price}}</h1>

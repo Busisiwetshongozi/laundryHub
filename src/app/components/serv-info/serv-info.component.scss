@@ -1,29 +1,29 @@
 .container h1{
-    color: red;
-    font-size: 30px;
+    color:white;
+    font-size: 35px;
     margin-left: 150px;
+
 }
 .container h2{
-    margin-left: 450px;
-    margin-top: 40px;
-   
+   color: white;
+   margin-top:30px ;
 }
 .container{
     width: 600px;
-    height: 300px;
-    background-color: antiquewhite;
+    height: 600px;
+    background-color:rgb(5, 55, 57);
 }
 .container p{
     margin-left: 200px;
 }
 
-.container p input{
-    width: 60px;
-    border-radius: 10px;
+button{
+    background-color: rgb(1, 26, 39);
     border: solid 0px;
-}
-.container h2 input{
-    width: 60px;
+    height: 40px;
+    width: 100px;
+    color: white;
     border-radius: 10px;
-    border: solid 0px;
+ margin-top: 200px;
+ 
 }

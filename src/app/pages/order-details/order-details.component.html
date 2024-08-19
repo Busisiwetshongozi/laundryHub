@@ -1,6 +1,6 @@
 
 <div class="container" *ngIf="!submitted" >
-<form [formGroup]="pickupForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="pickupForm" (ngSubmit)="onNext()">
   <div class="holder">
     <h1>Pick Up Details</h1>
     <div class="container1">
@@ -56,8 +56,8 @@
     </div>
   </div>
 
-  <button id="back" routerLink="/home">Back</button>
-  <button type="submit" id="next">Next</button>
+  <button id="back" routerLink="/services" (click)="goBack()">Back</button>
+  <button type="submit" (click)="onNext()" id="next">Next</button>
 </form>
 
 
@@ -70,7 +70,7 @@
   <p><strong>Full Names:</strong> {{ submittedData.name }}</p>
   <p><strong>Email:</strong> {{ submittedData.email }}</p>
   <p><strong>Address:</strong> {{ submittedData.address }}</p>
-  <button (click)="onConfirm()" > Confirm</button>
+  <button (click)="onConfirm()" routerLink="/payment" > Confirm</button>
   
 </div>
 

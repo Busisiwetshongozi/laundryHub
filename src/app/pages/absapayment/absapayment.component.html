@@ -1,7 +1,7 @@
 
   
  
-  <form class="Form" >
+  <form class="Form" [formGroup]="payForm" (ngSubmit)="onSubmit()"  >
     <div class="absa">
       <img src="assets/absa.webp" alt="">
       </div>
@@ -9,12 +9,12 @@
       <div class="labels">
     <div class="email">
       <label  class="form-label">Absa Mobile App Email Address</label>
-      <input type="text" class="form-control" id="email" value="Your email" required>
+      <input type="text" class="form-control" formControlName="email" id="email" value="Your email" required>
       
     </div>
     <div class="password">
       <label  class="form-label">Absa Bank Mobile App Password</label>
-      <input type="text" class="form-control" id="password" value="your password" required>
+      <input type="text" formControlName ="password" class="form-control" id="password" value="your password" required>
       
     </div>
 
@@ -24,9 +24,9 @@
    
   
     <div class="Pay">
-      <button  routerLink="/success"  class="btn btn-primary" type="submit">Pay</button>
+      <button  routerLink="/select"  class="btn btn-primary" type="submit">Pay</button>
     </div>
-    <div class="cancel">
+    <div routerLink="/bank"  class="cancel">
       <button class="btn btn-primary" type="submit">Cancel</button>
     </div>
   </form>

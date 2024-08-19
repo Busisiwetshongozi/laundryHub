@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Payment } from '../models/Payment'; 
+import { LoginService } from './login.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CreatePaymentService {
 
-  constructor(private http:HttpClient) { }
+  private apiUrl = 'http://localhost:8080/api/payments/add'; 
 
-  apiUrl='http://localhost:8080/api/payments/add'
+  constructor(private http: HttpClient,private loginService:LoginService) { }
 
-  createPayment(paymentData: any): Observable<Payment> {
-    return this.http.post<Payment>(this.apiUrl, paymentData);
+  createPayment(orderData: any): Observable<Payment> {
+    const token = this.loginService.getToken(); // Retrieve the token from the AuthService
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+
+    return this.http.post<Payment>(this.apiUrl, orderData, { headers });
   }
 }

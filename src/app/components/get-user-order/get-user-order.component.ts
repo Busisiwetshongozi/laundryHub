@@ -1,33 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GetUserOrderService } from 'src/app/services/get-user-order.service';
-import { Order} from 'src/app/models/Order';
-import { ActivatedRoute } from '@angular/router';
+import { Order } from 'src/app/models/Order';
 
 @Component({
   selector: 'app-get-user-order',
   templateUrl: './get-user-order.component.html',
   styleUrls: ['./get-user-order.component.scss']
 })
-export class GetUserOrderComponent {
+export class GetUserOrderComponent implements OnInit {
 
   orders: Order[] = [];
-  userId: number = 1; 
 
   constructor(private getUserOrderService: GetUserOrderService) { }
 
   ngOnInit(): void {
-    this.getUserOrder(this.userId);
+    this.getUserOrders();
   }
 
-
-  getUserOrder(userId: number): void {
-    this.getUserOrderService.getUserOrder(userId)
-      .subscribe({
-        next: orders => {
-          this.orders = orders;
-          console.log(this.orders); // Log to check if data is being received
+  getUserOrders(): void {
+    this.getUserOrderService.getUserOrder()
+      .subscribe(
+        (data: Order[]) => {
+          this.orders = data;
         },
-        error: err => console.error('Failed to fetch orders', err)
-      });
+        (error: any) => {
+          console.error('Error fetching user orders:', error);
+          // Add more specific error handling or user feedback here
+        }
+      );
   }
 }

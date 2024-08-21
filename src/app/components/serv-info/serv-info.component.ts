@@ -13,14 +13,7 @@ import { LoginService } from 'src/app/services/login.service';
 export class ServInfoComponent implements OnInit {
   service: Services | undefined;
   submitted = false; // Track if the data has been submitted
-  submittedData: any = { // Data structure for additional information
-    requireFetch: false,
-    date: '',
-    time: '',
-    name: '',
-    email: '',
-    address: ''
-  };
+
 
   constructor(
     private route: ActivatedRoute,
@@ -49,19 +42,13 @@ export class ServInfoComponent implements OnInit {
         serviceId: this.service.id,
         serviceName: this.service.name,
         servicePrice: this.service.price,
-        // Include additional data from the confirmation div
-        requireFetch: this.submittedData.requireFetch,
-        pickUpDate: this.submittedData.date,
-        pickUpTime: this.submittedData.time,
-        fullName: this.submittedData.name,
-        email: this.submittedData.email,
-        address: this.submittedData.address
+      
       };
 
       this.createOrderService.createOrder(orderData).subscribe({
         next: (response) => {
           console.log('Order placed successfully', response);
-          this.router.navigate(['/order-confirmation']); // Navigate to an order confirmation page or another page
+          this.router.navigate(['/payment']); // Navigate to an order confirmation page or another page
         },
         error: (error) => {
           console.error('Error placing order', error);

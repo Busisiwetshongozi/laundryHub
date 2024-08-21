@@ -39,6 +39,7 @@ export class UserRegistrationformComponent implements OnInit {
       role: this.signupForm.get('role')?.value || '', 
       password: this.signupForm.get('password')?.value || '', 
       lastName: this.signupForm.get('lastName')?.value || '' 
+  
   };
 
       this.createCustomerService.createCustomer(customerData)

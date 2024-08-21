@@ -1,23 +1,15 @@
 <div *ngIf="service" class="container">
     <h1>{{service.name}}</h1>
+   
+    <p style="margin-left: 0px;" >{{service.description}}</p>
     <h2>R{{service.price}}</h2>
-    <h2>{{service.description}}</h2>
-  
-    <button routerLink="/services">Back</button>
-    <button style="margin-left: 320px;" (click)="placeOrder()">Place Order</button>
+    <button (click)="placeOrder()">Place Order</button>
+    <button  style="margin-top: 20px;" routerLink="/services">Back</button>
+   
   </div>
   
   
-  <div class="confirm" *ngIf="submitted">
-    <h2>Submitted Data</h2>
-    <p><strong>Do You Require us to fetch the laundry:</strong> {{ submittedData.requireFetch }}</p>
-    <p><strong>Pick Up Date:</strong> {{ submittedData.date }}</p>
-    <p><strong>Pick Up Time:</strong> {{ submittedData.time }}</p>
-    <p><strong>Full Names:</strong> {{ submittedData.name }}</p>
-    <p><strong>Email:</strong> {{ submittedData.email }}</p>
-    <p><strong>Address:</strong> {{ submittedData.address }}</p>
-    <button (click)="placeOrder()" routerLink="/payment">Confirm</button>
-  </div>
+ 
   
 
 

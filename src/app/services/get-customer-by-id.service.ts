@@ -1,18 +1,29 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {  User } from '../models/User';
-import { Observable } from 'rxjs';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+import { User } from 'src/app/models/User';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetCustomerByIdService {
 
-  constructor(private http:HttpClient) { }
-apiUrl='http://localhost:8080/api/customers'
+  private apiUrl = 'http://localhost:8080/users/user'; // Adjust URL if necessary
 
-getCustomerById(id: number): Observable<User> {
-  return this.http.get<User>(`${this.apiUrl}/${id}`);
+  constructor(private http: HttpClient) { }
+
+  getCustomerById(): Observable<User> {
+    const token = localStorage.getItem('authToken');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+
+    return this.http.get<any>(this.apiUrl, { headers }).pipe(
+      catchError(error => {
+        console.error('Error fetching customer details:', error);
+        return throwError(error); // Proper error handling
+      })
+    );
+  }
 }
 
-}
+

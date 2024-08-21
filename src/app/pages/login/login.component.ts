@@ -16,10 +16,9 @@ export class LoginComponent {
   onLogin(): void {
     this.loginService.login(this.email, this.password).subscribe({
       next: (response: any) => {
-        // Assuming the token is in response.token
         if (response && response.token) {
-          localStorage.setItem('authToken', response.token);
-          this.router.navigate(['/services']); 
+          localStorage.setItem('authToken', response.token); // Ensure the token key matches
+          this.router.navigate(['/order']); 
         } else {
           console.error('Login response did not contain a token.');
         }
@@ -27,8 +26,7 @@ export class LoginComponent {
       error: (error) => {
         console.error('Login failed', error);
       }
-    });
-  }
+    });}
 }
 
 

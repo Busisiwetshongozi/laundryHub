@@ -38,7 +38,8 @@ import { CustomerByIdComponent } from './components/customer-by-id/customer-by-i
 
 import { GetUserOrderComponent } from './components/get-user-order/get-user-order.component';
 import { ProfileComponent } from './components/profile/profile.component';
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './services/authInterceptor';
 
 
 @NgModule({

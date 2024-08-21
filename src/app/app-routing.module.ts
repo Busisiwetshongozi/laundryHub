@@ -22,25 +22,27 @@ import { CustomerByIdComponent } from './components/customer-by-id/customer-by-i
 import { ServOfferedComponent } from './pages/ServOffered/ServOffered.component';
 import { ServInfoComponent } from './components/serv-info/serv-info.component';
 import { GetUserOrderComponent } from './components/get-user-order/get-user-order.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
 
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to home
   { path: 'home', component: LandingPageComponent },
-  {path:'order',component:OrderDetailsComponent},
+  {path:'order',component:OrderDetailsComponent,canActivate: [AuthGuard] },
   { path: 'register', component:UserRegistrationformComponent },
 { path: 'login', component:LoginComponent },
-{ path: 'services', component:ServOfferedComponent },
-{ path: 'services/:id', component: ServInfoComponent },
-{ path: 'payment', component: PaymentMethodComponent },
-  { path: 'bank', component:ChooseBankComponent },
-  { path: 'absa', component:AbsapaymentComponent },
-{ path: 'select', component: AbsaselectComponent },
-  { path: 'success', component:PaymentconfirmationComponent },
-  { path: 'orders/:id', component: OrderByIdComponent },
-  { path: 'customers/:id',component:CustomerByIdComponent },
-  { path: 'user-order',component:GetUserOrderComponent},
+{ path: 'services', component:ServOfferedComponent , canActivate: [AuthGuard]},
+{ path: 'services/:id', component: ServInfoComponent ,canActivate: [AuthGuard] , },
+{ path: 'payment', component: PaymentMethodComponent ,canActivate: [AuthGuard] },
+  { path: 'bank', component:ChooseBankComponent ,canActivate: [AuthGuard] },
+  { path: 'absa', component:AbsapaymentComponent ,canActivate: [AuthGuard] },
+{ path: 'select', component: AbsaselectComponent,canActivate: [AuthGuard]  },
+  { path: 'success', component:PaymentconfirmationComponent ,canActivate: [AuthGuard] },
+  { path: 'orders/:id', component: OrderByIdComponent,canActivate: [AuthGuard]  },
+  { path: 'customers/:id',component:CustomerByIdComponent ,canActivate: [AuthGuard] },
+  { path: 'user-order',component:GetUserOrderComponent ,canActivate: [AuthGuard] },
+
 
 ];
 

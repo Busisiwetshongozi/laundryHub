@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './customer-by-id.component.html',
   styleUrls: ['./customer-by-id.component.scss']
 })
-export class CustomerByIdComponent implements OnInit {
+export class CustomerByIdComponent  {
 
   customer: any;
 
@@ -17,29 +17,4 @@ export class CustomerByIdComponent implements OnInit {
     private getCustomer: GetCustomerByIdService
   ) { }
 
-  ngOnInit(): void {
-    // Subscribe to route parameter changes
-    this.route.params.subscribe(params => {
-      const customerId = +params['id']; 
-      if (isNaN(customerId) || customerId <= 0) {
-        console.error('Invalid order ID:', params['id']);
-
-        return;
-      }
-      this.getCustomerById(customerId);
-    });
-  }
-
-  getCustomerById(id: number): void {
-    this.getCustomer.getCustomerById(id)
-      .subscribe(
-        (data: any) => {
-          this.customer = data;
-        },
-        (error: any) => {
-          console.error('Error fetching order:', error);
-        }
-      );
-
-}
 }

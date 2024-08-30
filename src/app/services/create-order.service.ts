@@ -12,7 +12,7 @@ export class CreateOrderService {
 
   constructor(private http: HttpClient,private loginService:LoginService) { }
 
-  createOrder(orderData: any): Observable<Order> {
+  createOrder(orderData: Order): Observable<Order> {
     const token = this.loginService.getToken(); // Retrieve the token from the AuthService
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`

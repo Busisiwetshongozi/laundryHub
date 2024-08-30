@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
@@ -9,11 +9,8 @@ import { catchError, map } from 'rxjs/operators';
 export class LoginService {
 
   private apiUrl = 'http://localhost:8080/auth/login'; 
-
-
   private currentUserSubject: BehaviorSubject<any> = new BehaviorSubject<any>(this.getCurrentUser());
-public currentUser: Observable<any> = this.currentUserSubject.asObservable();
-
+  public currentUser: Observable<any> = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient) {}
 
@@ -34,18 +31,6 @@ public currentUser: Observable<any> = this.currentUserSubject.asObservable();
         })
       );
   }
-  
-  testAuthHeader(): void {
-    const token = localStorage.getItem('authToken');
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    
-    this.http.get(this.apiUrl, { headers }).subscribe(
-      response => console.log('Response:', response),
-      error => console.error('Error:', error)
-    );
-  }
-  
-  
 
   logout(): void {
     localStorage.removeItem('authToken');
@@ -53,19 +38,17 @@ public currentUser: Observable<any> = this.currentUserSubject.asObservable();
   }
 
   getToken(): string | null {
-    return localStorage.getItem('authToken'); // Direct retrieval of the token
+    return localStorage.getItem('authToken');
   }
 
-  getUserId(): number | null {
-    const token = this.getToken();
-    return null; // Return appropriate user ID or null
-  }
-  
-  
-
-  // Method to get the current user object
   getCurrentUser(): any {
     const token = this.getToken();
     return token ? { token } : null;
+  }
+
+  isLoggedIn(): Observable<boolean> {
+    return this.currentUserSubject.asObservable().pipe(
+      map(user => !!user) // Return true if user exists (i.e., logged in)
+    );
   }
 }

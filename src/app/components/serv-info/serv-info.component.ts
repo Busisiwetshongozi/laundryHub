@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Services } from 'src/app/models/Services';
 import { GetServiceService } from 'src/app/services/get-service.service';
 import { CreateOrderService } from 'src/app/services/create-order.service';
-import { LoginService } from 'src/app/services/login.service';
+import { Order } from 'src/app/models/Order'; // Ensure this is imported
 
 @Component({
   selector: 'app-serv-info',
@@ -14,12 +14,10 @@ export class ServInfoComponent implements OnInit {
   service: Services | undefined;
   submitted = false; // Track if the data has been submitted
 
-
   constructor(
     private route: ActivatedRoute,
     private getservices: GetServiceService,
     private createOrderService: CreateOrderService,
-    private loginService: LoginService,
     private router: Router
   ) { }
 
@@ -38,14 +36,12 @@ export class ServInfoComponent implements OnInit {
 
   placeOrder() {
     if (this.service) {
-      const orderData = {
-        serviceId: this.service.id,
-        serviceName: this.service.name,
-        servicePrice: this.service.price,
-      
+      const order: Order = {
+        status: 'Pending', // Set appropriate status
+        serviceIds: [this.service.id] // Send only the IDs as an array
       };
 
-      this.createOrderService.createOrder(orderData).subscribe({
+      this.createOrderService.createOrder(order).subscribe({
         next: (response) => {
           console.log('Order placed successfully', response);
           this.router.navigate(['/payment']); // Navigate to an order confirmation page or another page
@@ -58,4 +54,5 @@ export class ServInfoComponent implements OnInit {
     }
   }
 }
+
 

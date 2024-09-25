@@ -15,7 +15,7 @@ export class OrderDetailsComponent implements OnInit {
   pickupForm: FormGroup;
   submitted = false;
   submittedData: any = {};
-  customer: User | undefined;
+  user: User | undefined;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -42,18 +42,19 @@ export class OrderDetailsComponent implements OnInit {
     this.getCustomerById.getCustomerById().subscribe(
       (data: User) => {
         console.log('Customer details fetched:', data);
-        this.customer = data;
-        if (this.customer) {
+        this.user = data;
+        if (this.user) {
           this.pickupForm.patchValue({
-            name: this.customer.firstName,
-            email: this.customer.email,
-            address: this.customer.address
-            
+            name: this.user.firstName,
+            email: this.user.email,
+            address: this.user.address
+            // Consider handling other fields or default values here
           });
         }
       },
       (error) => {
         console.error('Error fetching customer details:', error);
+        // Optional: Provide user feedback here
       }
     );
   }
@@ -62,6 +63,7 @@ export class OrderDetailsComponent implements OnInit {
     this.submittedData = this.pickupForm.value;
     this.submitted = true;
     console.log('Submitted Data:', this.submittedData);
+    // Optional: Perform validation or additional operations here
   }
 
   goBack(): void {
@@ -69,6 +71,7 @@ export class OrderDetailsComponent implements OnInit {
       this.router.navigate(['services']);
     } else {
       console.error('Service ID is undefined');
+      // Optional: Provide user feedback here
     }
   }
 
@@ -82,10 +85,11 @@ export class OrderDetailsComponent implements OnInit {
           },
           (error: any) => {
             console.error('Error submitting data:', error);
-            // Handle error, show user-friendly message, etc.
+            // Optional: Provide user feedback here
           }
         );
     }
   }
 }
+
 

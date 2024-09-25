@@ -13,22 +13,21 @@ import { ServOfferedComponent } from './pages/ServOffered/ServOffered.component'
 import { HomePageComponent } from './pages/homePage/homePage.component';
 import { LandingPageComponent } from './pages/landingPage/landingPage.component';
 import { LoginComponent } from './pages/login/login.component';
-import { AfricanselectComponent } from './components/africanselect/africanselect.component';
-import { CapitecselectComponent } from './components/capitecselect/capitecselect.component';
+
 import { AbsaselectComponent } from './components/absaselect/absaselect.component';
 import { AbsapaymentComponent } from './pages/absapayment/absapayment.component';
-import { AfricanpaymentComponent } from './pages/africanpayment/africanpayment.component';
-import { BankComponent } from './pages/bank/bank.component';
-import { CapitecpaymentComponent } from './pages/capitecpayment/capitecpayment.component';
+
+
+
 import { ChooseBankComponent } from './pages/chooseBank/chooseBank.component';
-import { FnbpaymentComponent } from './pages/fnbpayment/fnbpayment.component';
+
 import { OrderDetailsComponent } from './pages/order-details/order-details.component';
 import { PaymentMethodComponent } from './pages/paymentMethod/paymentMethod.component';
 import { PaymentconfirmationComponent } from './pages/paymentconfirmation/paymentconfirmation.component';
-import { SelectaccountComponent } from './pages/selectaccount/selectaccount.component';
-import { TymepaymentComponent } from './pages/tymepayment/tymepayment.component';
-import { TymeselectComponent } from './components/tymeselect/tymeselect.component';
-import { FnbselectComponent } from './components/fnbselect/fnbselect.component';
+
+
+
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GetOrdersComponent } from './components/get-orders/get-orders.component';
@@ -40,6 +39,7 @@ import { GetUserOrderComponent } from './components/get-user-order/get-user-orde
 import { ProfileComponent } from './components/profile/profile.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './services/authInterceptor';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
 @NgModule({
@@ -56,19 +56,17 @@ import { AuthInterceptor } from './services/authInterceptor';
     OrderDetailsComponent,
   PaymentMethodComponent,
       ChooseBankComponent,
-      BankComponent,
-      SelectaccountComponent,
+   
+     
       PaymentconfirmationComponent,
       AbsapaymentComponent,
-      CapitecpaymentComponent,
-      FnbpaymentComponent,
-      AfricanpaymentComponent,
-      TymepaymentComponent,
-      TymeselectComponent,
-       FnbselectComponent,
+     
+ 
+      
+     
       AbsaselectComponent,
-      AfricanselectComponent,
-      CapitecselectComponent,
+    
+  
  UserRegistrationformComponent,
  GetOrdersComponent,
  OrderByIdComponent,
@@ -77,6 +75,7 @@ import { AuthInterceptor } from './services/authInterceptor';
 
  GetUserOrderComponent,
   ProfileComponent,
+  AboutUsComponent,
 
  
 

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FnbselectComponent } from './fnbselect.component';
+import { AboutUsComponent } from './about-us.component';
 
-describe('FnbselectComponent', () => {
-  let component: FnbselectComponent;
-  let fixture: ComponentFixture<FnbselectComponent>;
+describe('AboutUsComponent', () => {
+  let component: AboutUsComponent;
+  let fixture: ComponentFixture<AboutUsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FnbselectComponent]
+      declarations: [AboutUsComponent]
     });
-    fixture = TestBed.createComponent(FnbselectComponent);
+    fixture = TestBed.createComponent(AboutUsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

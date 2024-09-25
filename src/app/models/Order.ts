@@ -1,14 +1,12 @@
 import { Time } from "@angular/common";
+import { Services } from "./Services";
 
 export interface Order{
-id:number,
-    name:string,
-    date:Date,
-    status:string;
-    address:string,
-    email:string;
-  
-
+   
+    status?: string;
+    serviceIds?: number[]; // Changed to match backend expectations
+    paymentId?: number;
+    services?: Services[];
 
 
 }

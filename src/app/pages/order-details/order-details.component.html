@@ -1,4 +1,4 @@
-<div  style="height: 100%;width: 100%;" class="container" *ngIf="!submitted">
+<div  style="height: 100%;width: 100vh;" class="container" *ngIf="!submitted">
   <form  style="width: 100%;height: 100vh;"   [formGroup]="pickupForm" (ngSubmit)="onNext()">
     <div class="holder">
       <h1 >Pick Up Details</h1>
@@ -14,34 +14,34 @@
           </div>
           <div class="col">
             <label class="form-label">Pick Up Date</label>
-            <input style="width: 180px;margin-top: 25px;border-radius: 5px;height: 35px;" type="date" class="form-control" formControlName="date" placeholder="Pick Up Date">
+            <input style="width: 180px;margin-top: 3px;border-radius: 5px;height: 35px;" type="date" class="form-control" formControlName="date" placeholder="Pick Up Date">
           </div>
           <div class="col">
             <label class="form-label">Pick Up Time</label>
-            <input type="time" class="form-control" formControlName="time" placeholder="Pick Up Time">
+            <input style="margin-top: -20px;" type="time" class="form-control" formControlName="time" placeholder="Pick Up Time">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="holder"  *ngIf="customer" >
+    <div class="holder"  *ngIf="user" >
       <h1>Customer Details</h1>
       <div class="container1">
         <div class="row row-cols-2">
           <div class="col">
             <label class="form-label">Name</label>
-            <input  style="height: 35px;" type="text" class="form-control" formControlName="firstName" placeholder="{{customer.firstName}}">
+            <input  style="height: 35px;" type="text" class="form-control" formControlName="firstName" placeholder="{{user.firstName}}">
           </div>
           <div class="col"  style="margin-top: 70px;margin-left: -205px;">
-            <label class="form-label">Address</label>
-            <input   style="height: 35px;" type="text" class="form-control"    formControlName="address" placeholder="address">
+            <label style="margin-left: -190px;margin-top: 15px;" class="form-label">Address</label>
+            <input   style="height: 35px;margin-left: -190px;" type="text" class="form-control"    formControlName="address" placeholder="address">
           </div>
         </div>
       </div>
     </div>
 
     <div class="holder" >
-      <h1>Address Details</h1>
+      <h1>Contact Details</h1>
       <div class="container1">
         <div class="row row-cols-2">
           <div class="col">
@@ -56,8 +56,9 @@
     <div class="bnts" style="margin-top: 70px;height: 50px;" >
 
 
-      <button  style="margin-top: 80px;margin-left: 30px;" id="back" routerLink="/services" (click)="goBack()">Back</button>
-      <button type="submit"  style="margin-top:-100px;margin-left: 70px;"   routerLink="/services" id="next"  (click)=" onNext() " >Next</button>
+      <button  style="margin-top: -60px;margin-left: 450px;" id="back" routerLink="/services" (click)="goBack()">Back</button>
+      <div class="next" style="width: 200px;margin-top: -30px;">      <button type="submit"  style="margin-top:-80px;margin-left: 70px;"   routerLink="/services" id="next"  (click)=" onNext() " >Next</button></div>
+
     </div>
 
 

@@ -1,14 +1,45 @@
-
-<div *ngFor=" let order of orders">
-  <h2>Your Orders</h2>
-  <ul>
-    <li >
-      Order ID: {{order.name}} | Status: {{ order.status }} | Date: {{ order.date | date }}
-    </li>
-  </ul>
+<div *ngIf="orders.length > 0; else noOrders" class="container mt-4" >
+  <h2 style="margin-left: 400px;">Your Orders</h2>
+  <div style="margin-left: 400px;width: 1500px;flex-direction: column;" class="row">
+    <div *ngFor="let order of orders" class="col-md-4 mb-4">
+      <div class="card" style="background-color: #003049; color: rgb(239, 229, 229);">
+        <div class="card-body">
+          <h5 class="card-title">Order Status: {{order.status}}</h5>
+          <p class="card-text">
+           
+            <strong>Payment Amount:</strong>
+            <ng-container *ngIf="order.paymentId != null; else noPayment">
+             R {{payments[order.paymentId]?.amount}} <br>
+            </ng-container>
+            <ng-template #noPayment>
+              Payment details not available
+            </ng-template>
+          </p>
+          <h6 class="card-subtitle mb-2">Services:</h6>
+          <ul *ngIf="order.services && order.services.length > 0; else noServices" class="list-unstyled">
+            <li *ngFor="let service of order.services" class="mb-2" style="background-color: #02565c;margin-top: 50px;">
+              <div class="card" style="background-color: rgba(255, 255, 255, 0.1);">
+                <div class="card-body" style="color: rgb(250, 247, 244);">
+                  <strong>Name:</strong> {{service.name}} <br>
+                  <strong>Description:</strong> {{service.description}} <br>
+                  <strong>Price:</strong> R{{service.price}}
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ng-template #noServices>
+            No services available for this order.
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary mt-3" style="background-color:#02565c ;margin-left: 690px;width: 200px;" routerLink="/success">Next</button>
 </div>
+
 <ng-template #noOrders>
-  <p>You have no orders.</p>
+  <p class="text-white">You have no orders.</p>
 </ng-template>
 
-  
+
+

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CreatePaymentService } from 'src/app/services/create-payment.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-absaselect',
   templateUrl: './absaselect.component.html',
@@ -20,21 +20,23 @@ export class AbsaselectComponent {
   amount: number | null = null;
   
 
-  constructor(private http: HttpClient,private paymentService:CreatePaymentService) {}
+  constructor(private http: HttpClient,private paymentService:CreatePaymentService,private router:Router) {}
 
-  sendData() {
-const payload = { date: this.date, amount: this.amount };
+  sendData(): void {
+    const payload = { date: this.date, amount: this.amount };
 
-    
-    this.http.post('http://localhost:8080/api/payments/add', payload)
+    this.paymentService.createPayment(payload)
       .subscribe(
         response => {
           console.log('Success:', response);
-          // Handle success, such as redirecting or updating the UI
+          // Navigate to the confirmation page on success
+          this.router.navigate(['/user-order']); // Adjust the route as necessary
         },
         error => {
           console.error('Error:', error);
           // Handle error
         }
       );
-}}
+  }
+
+}

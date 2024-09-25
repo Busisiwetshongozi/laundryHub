@@ -21,7 +21,6 @@ export class UserRegistrationformComponent implements OnInit {
       role:[''],
       address: [''],
       firstName:[''],
-      lastName:[''],
       password:['']
     });
   }
@@ -37,8 +36,8 @@ export class UserRegistrationformComponent implements OnInit {
       number: this.signupForm.get('number')?.value || 0, 
       address: this.signupForm.get('address')?.value || '', 
       role: this.signupForm.get('role')?.value || '', 
-      password: this.signupForm.get('password')?.value || '', 
-      lastName: this.signupForm.get('lastName')?.value || '' 
+      password: this.signupForm.get('password')?.value || '' 
+      
   
   };
 

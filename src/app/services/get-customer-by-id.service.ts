@@ -9,7 +9,7 @@ import { User } from 'src/app/models/User';
 })
 export class GetCustomerByIdService {
 
-  private apiUrl = 'http://localhost:8080/users/'; // Adjust URL if necessary
+  private apiUrl = 'http://localhost:8080/users'; // Adjust URL if necessary
 
   constructor(private http: HttpClient) { }
 

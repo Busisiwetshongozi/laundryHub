@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { jwtDecode } from 'jwt-decode'; // Correct for named export
+
 
 @Injectable({
   providedIn: 'root'
@@ -47,8 +49,22 @@ export class LoginService {
   }
 
   isLoggedIn(): Observable<boolean> {
-    return this.currentUserSubject.asObservable().pipe(
-      map(user => !!user) // Return true if user exists (i.e., logged in)
-    );
+    const token = this.getToken();
+    if (!token) {
+      return of(false);
+    }
+    return of(this.isTokenValid(token));
+  }
+
+  private isTokenValid(token: string): boolean {
+    try {
+      const decodedToken: any = jwtDecode(token); // Correct function name
+      const expiry = decodedToken.exp * 1000; // Convert to milliseconds
+      return expiry > Date.now();
+    } catch (e) {
+      console.error('Token decoding error:', e);
+      return false;
+    }
   }
 }
+

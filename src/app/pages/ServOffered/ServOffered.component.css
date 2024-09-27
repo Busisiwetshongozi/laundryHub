@@ -15,6 +15,7 @@
     width: 280px;
     margin-top: 70px;
     margin-left: -10px;
+    height: 500px;
 }
 
 .service-item img {
@@ -29,8 +30,25 @@ img{
 }
 .container{
     
-    height: 100vh;
-  
+  height: 110vh;
+  background-color: rgb(2, 46, 22);
     padding: 20px;
 
+}
+@media (max-width:676px){
+  .container{
+    height: 300%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .services-grid{
+    height:100%;
+    width: 100%;
+  }
+  .service-item{
+    height: 80%;
+    width: 70%;
+    margin-left: 100%;
+  }
 }

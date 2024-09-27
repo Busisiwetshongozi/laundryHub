@@ -1,69 +1,66 @@
-<div  style="height: 100%;width: 100vh;" class="container" *ngIf="!submitted">
-  <form  style="width: 100%;height: 100vh;"   [formGroup]="pickupForm" (ngSubmit)="onNext()">
+<div style="height: 100vh; width: 100%;" class="container" *ngIf="!submitted">
+  <form style="width: 100%; height: 100vh;" [formGroup]="pickupForm" (ngSubmit)="onNext()">
     <div class="holder">
-      <h1 >Pick Up Details</h1>
+      <h1>Pick Up Details</h1>
       <div class="container1">
         <div class="row row-cols-2">
           <div class="col">
-            <label class="form-label">Do You Require us to fetch the laundry </label>
+            <label class="form-label">Do You Require us to fetch the laundry</label>
             <select class="form-select" formControlName="requireFetch">
               <option value="Select" selected>Select</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </div>
-          <div class="col">
+          <div class="col" style="" >
             <label class="form-label">Pick Up Date</label>
-            <input style="width: 180px;margin-top: 3px;border-radius: 5px;height: 35px;" type="date" class="form-control" formControlName="date" placeholder="Pick Up Date">
+            <input type="date" class="form-control" style="border-radius: 5px; height: 35px; margin-top: 5px;" formControlName="date" placeholder="Pick Up Date">
           </div>
           <div class="col">
             <label class="form-label">Pick Up Time</label>
-            <input style="margin-top: -20px;" type="time" class="form-control" formControlName="time" placeholder="Pick Up Time">
+            <input type="time" class="form-control" formControlName="time" placeholder="Pick Up Time" style="margin-top: 5px;">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="holder"  *ngIf="user" >
+    <div class="holder" *ngIf="user">
       <h1>Customer Details</h1>
       <div class="container1">
         <div class="row row-cols-2">
           <div class="col">
             <label class="form-label">Name</label>
-            <input  style="height: 35px;" type="text" class="form-control" formControlName="firstName" placeholder="{{user.firstName}}">
+            <input type="text" class="form-control" formControlName="firstName" placeholder="{{user.firstName}}" style="height: 35px;">
           </div>
-          <div class="col"  style="margin-top: 70px;margin-left: -205px;">
-            <label style="margin-left: -190px;margin-top: 15px;" class="form-label">Address</label>
-            <input   style="height: 35px;margin-left: -190px;" type="text" class="form-control"    formControlName="address" placeholder="address">
+          <div class="col3" style="">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-control" formControlName="address" placeholder="Address" style="height: 35px;">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="holder" >
+    <div class="holder">
       <h1>Contact Details</h1>
       <div class="container1">
         <div class="row row-cols-2">
           <div class="col">
             <label class="form-label"></label>
-            <input type="email"  style="height: 35px;" class="form-control" formControlName="email" placeholder="Email">
+            <input type="email" class="form-control" formControlName="email" placeholder="Email" style="height: 35px;">
           </div>
-          <!-- Other address details inputs -->
         </div>
       </div>
     </div>
     
-    <div class="bnts" style="margin-top: 70px;height: 50px;" >
-
-
-      <button  style="margin-top: -60px;margin-left: 450px;" id="back" routerLink="/services" (click)="goBack()">Back</button>
-      <div class="next" style="width: 200px;margin-top: -30px;">      <button type="submit"  style="margin-top:-80px;margin-left: 70px;"   routerLink="/services" id="next"  (click)=" onNext() " >Next</button></div>
-
+    <div class="bnts" style="margin-top: 70px;">
+      <button style="margin-top: -60px;" id="back" routerLink="/services" (click)="goBack()">Back</button>
+      <div class="next" style="margin-top: -30px;">
+        <button type="submit" style="margin-top: -70px;" routerLink="/services" id="next" (click)="onNext()">Next</button>
+      </div>
     </div>
-
-
   </form>
 </div>
+
 
 
 

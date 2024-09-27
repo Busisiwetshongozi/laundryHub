@@ -2,8 +2,8 @@
  width: 500px; 
  height: 800px;
     border-radius: 30px;
-    background-color:rgb(115, 161, 161);
-   
+    background-color:rgb(2, 46, 22);
+   color: white;
 }
 
 
@@ -34,4 +34,22 @@ svg{
   height: 100px;
   margin-left: 150px;
   margin-top: 200px;
+}
+@media(max-width:676px){
+  .container{
+    width: 100%;
+    height: 100%;
+  
+  }
+  button{
+    margin-bottom: 60px;
+ margin-left: 20%;
+    width: 50%;
+  }
+  svg{
+  margin-left: 30%;
+  }
+  h1{
+    padding-top: 10px;
+  }
 }

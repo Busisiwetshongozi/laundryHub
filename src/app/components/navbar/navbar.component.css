@@ -33,3 +33,10 @@ h1{
     height: 60px;
 }
 
+
+
+  
+@media (max-width: 676px){
+    .container-fluid{width: 100%;}
+}
+

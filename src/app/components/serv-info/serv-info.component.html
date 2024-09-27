@@ -1,15 +1,11 @@
 <div *ngIf="service" class="container">
-    <h1 style="margin-left: 100px;">{{service.name}}</h1>
-   
-    <p style="margin-left: 100px;" >{{service.description}}</p>
-    <h2 style="margin-left: 170px;">R{{service.price}}</h2>
-    <button (click)="placeOrder()">Place Order</button>
-    <button  style="margin-top: 20px;" routerLink="/services">Back</button>
-   
-  </div>
-  
-  
- 
+  <h1 class="service-title">{{service.name}}</h1>
+  <p class="service-description">{{service.description}}</p>
+  <h2 class="service-price">R{{service.price}}</h2>
+  <button (click)="placeOrder()">Place Order</button>
+  <button id="back" style="margin-top: 20px;" routerLink="/services">Back</button>
+</div>
+
   
 
 

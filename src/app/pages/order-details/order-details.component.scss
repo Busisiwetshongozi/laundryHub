@@ -5,32 +5,12 @@
     height: 40px;
     width: 360px;
     border-radius: 10px;
-    border: solid 0px;
-    background-color: #2a9d8f;
+    background-color: rgb(2, 46, 22);
     
 }
-.confirm button{
-    margin-left: 200px;
-    margin-top: 50px;
-}
 
-.confirm{
 
-    background-color:#2a9d8f;
-    width: 700px;
-    height: 800px;
-    margin-left: 400px;
-   
-}
 
-.confirm h2{
-    margin-left: 200px;
-}
-
-.confirm p{
-    margin-left: 30px;
-    margin-top: 50px;
-}
 input{
    
     height: 30px;
@@ -42,13 +22,13 @@ input{
 
 .form-label{
    padding-top: 10px;
-   padding-bottom: 10px;
+
 }
 
 .container{
-    width: 1500px;
+    width: 100px;
     height:100px;
-    background-color:rgb(115, 161, 161);
+    background-color:rgb(2, 46, 22);
 box-shadow: 60px;
     border-radius: 10px;
    
@@ -56,9 +36,7 @@ box-shadow: 60px;
    
   
 }
-#address{
-    
-}
+
 
 #second{
     margin-top: 20px;
@@ -73,7 +51,7 @@ button{
 }
 
 #next{
- margin-left: 270px;
+ margin-left: 60%;
 margin-top: 45px;
  background-color: #2a9d8f;
 }
@@ -96,5 +74,52 @@ margin-top: 45px;
     padding-top: 20px;
     margin-left: 20px;
 }
+#date{
+    margin-top: 150px;
+}
 
+@media (max-width:676px){
 
+    form{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    input{
+        width: 80%;
+        height: 30px;
+    }
+    select{
+        width: 50%;
+    }
+    .date{
+        width: 30%;
+    }
+    label{
+
+    }
+    #next{
+        margin-left: 10px;
+        width: 50%;
+        height: 60%;
+    }
+    #back{
+        width: 50%;
+        margin-left: 140%;
+        height: 5%;
+    }
+    .bnts{
+        width: 50%;
+        height: 60%;
+       
+    }
+    .col3{
+        margin-right: 100%;
+    }
+}

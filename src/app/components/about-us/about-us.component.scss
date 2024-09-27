@@ -1,0 +1,39 @@
+
+.container {
+    padding: 0 15px; /* Add some padding for small screens */
+    background-color: rgb(2, 46, 22);
+    color: white;
+}
+
+.card {
+    width: 100%; /* Full width cards */
+    height: auto; /* Auto height for responsiveness */
+}
+
+#introduction h1 {
+    font-size: 2.5rem; /* Adjust for larger screens */
+}
+
+@media (max-width: 576px) {
+    #introduction h1 {
+        font-size: 1.75rem; /* Smaller heading on mobile */
+    }
+
+    #mission-vision {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center; /* Center align */
+    }
+
+    #mission-vision h2 {
+        text-align: center; /* Center align headers */
+    }
+
+    #mission-vision p {
+        text-align: center; /* Center align text */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .card {
+        margin: 0 auto; /* Center cards */
+    }
+}

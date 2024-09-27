@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -9,11 +9,14 @@ import { LoginService } from 'src/app/services/login.service';
 export class NavbarComponent implements OnInit {
 
   isLoggedIn = false;
+  isDesktop = true;
+  isMenuOpen = false; // Track whether the menu is open
 
   constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
     this.checkLoginStatus();
+    this.updateScreenSize();
   }
 
   checkLoginStatus(): void {
@@ -22,9 +25,21 @@ export class NavbarComponent implements OnInit {
     });
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any): void {
+    this.updateScreenSize();
+  }
+
+  updateScreenSize(): void {
+    this.isDesktop = window.innerWidth > 676;
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen; // Toggle the menu open state
+  }
+
   logout(): void {
     this.loginService.logout();
     this.checkLoginStatus(); // Update login status after logout
-    // Optionally, redirect or perform other actions after logout
   }
 }

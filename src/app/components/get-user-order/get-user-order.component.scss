@@ -1,0 +1,44 @@
+.container {
+    width: 100%;
+    padding: 20px; /* Add some padding for mobile */
+}
+
+.orders-title {
+    text-align: center; /* Center title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.orders-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    justify-content: center; /* Center cards */
+}
+
+.order-card {
+    background-color: rgb(2, 46, 22); 
+    color: rgb(239, 229, 229);
+    margin: 10px; /* Space between cards */
+    width: 100%; /* Full width on mobile */
+}
+
+.service-item {
+    background-color: #02565c; /* Service item background */
+    margin-top: 20px; /* Space between service items */
+}
+
+.service-card {
+    background-color: whitesmoke; /* Semi-transparent */
+    color: black;
+}
+
+.next-button {
+    display: block; /* Center button on mobile */
+    margin: 20px auto; /* Center the button horizontally */
+    width: 200px; /* Fixed width for better appearance */
+}
+
+@media (min-width: 768px) {
+    .order-card {
+        width: calc(33.33% - 20px); /* 3 cards per row on larger screens */
+    }
+}
